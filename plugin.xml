@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="d3ComponentLibrary" loader="DEFAULT">
+<overlays>
+		<overlay id="startup.d3ComponentLibrary" resourcebundle="content/d3ComponentLibrary/resources/lang/messages">
+			<menubar id="toolsmenu">
+	        	<menuitem id="d3ComponentLibrary" label="${Launcher.d3ComponentLibrary}" command="mantleXulHandler.openUrl('${Launcher.d3ComponentLibrary}','${Launcher.d3ComponentLibrary_TOOLTIP}','plugin/d3ComponentLibrary/api/default')"/>
+	      	</menubar>
+	    </overlay>
+	</overlays>
+	<lifecycle-listener class="pt.webdetails.cpk.CpkLifecycleListener"/>
+	<static-paths>
+		<static-path url="/d3ComponentLibrary/static" localFolder="static"/>
+		<static-path url="/d3ComponentLibrary/resources" localFolder="resources"/>
+	</static-paths>
+	<content-types>
+		<content-type>
+			<title>D3ComponentLibrary</title>
+			<description></description>
+			<company name="" url="" logo="@PLUGIN_COMPANY_LOGO@"></company>
+		</content-type>
+	</content-types>
+	<content-generator
+		id="d3ComponentLibrary"
+		title="D3ComponentLibrary"
+		type="d3ComponentLibrary"
+		class="pt.webdetails.cpk.CpkContentGenerator"/>
+	<!-- Menu entry -->
+	<menu-items>
+		<!--<menu-item id="d3ComponentLibrary_main" anchor="tools-submenu" label="D3ComponentLibrary" command="content/d3ComponentLibrary/" type="MENU_ITEM" how="LAST_CHILD"/>-->
+	</menu-items>
+</plugin>

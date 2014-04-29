@@ -1,0 +1,679 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+/*
+ * WDStyleGuide Template CSS  
+ *
+ * Use this as a template to format the styles of specific projects. Most of 
+ * the most commonly used classes/rules are already written here. The file is
+ * divided in the following sections:
+ *
+ *    Fonts
+ *    Style Resets
+ *    1. BACKGROUND 
+ *    2. HEADER 
+ *    3. FILTER CELLS
+ *    4. DATA CELLS
+ *    5. TABLES
+ *    6. CHARTS 
+ *    7. SELECTORS AND BUTTONS 
+ *    Other 
+ *    Project Specific Items  
+ *
+*/
+
+
+/* ==========================================================================
+  FONTS
+   =========================================================================== */
+
+@font-face {
+  font-family: 'Open Sans Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Semibold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+    font-family: 'Gudea';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gudea'), url('http://themes.googleusercontent.com/static/fonts/gudea/v1/kfCeUiT0HGXHQC8YVeaKy6CWcynf_cDxXwCLxiixG1c.woff') format('woff');
+}
+
+
+/* =============================================================================
+   Style Resets
+   ========================================================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  /*margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Open Sans, Arial, sans-serif;*/
+}
+
+.WDhidden{
+    display:none;
+}
+
+
+
+
+/* =============================================================================
+   1. BACKGROUND 
+   ========================================================================== */
+
+/* Window Background */
+body{
+    font-family: 'Open Sans Light';
+    background: none repeat scroll 0% 0% #EBEDEE;
+}
+
+
+
+	background: #EBEDEE;
+
+.sparklWrapper{
+	width: 1000px;
+	margin-right:auto;
+  margin-left:auto;
+  background: #ebedee;
+}
+
+/* =============================================================================
+   2. HEADER 
+   ========================================================================== */
+   
+
+/* =============================================================================
+   3. FILTER CELLS
+   ========================================================================== */
+
+/* =============================================================================
+   4. DATA CELLS
+   ========================================================================== */
+
+/* =============================================================================
+   5. TABLES
+   ========================================================================== */
+
+/* =============================================================================
+   6. CHARTS 
+   ========================================================================== */
+
+/* =============================================================================
+   7. SELECTORS AND BUTTONS 
+   ========================================================================== */
+
+/* =============================================================================
+   Other 
+   ========================================================================== */
+
+.chzn-container-single .chzn-single span {
+  display: inline;
+  color: #0098c4;
+}
+
+.chzn-container-single .chzn-single span:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 4px;
+  background-image: url('../img/mini-arrow.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  margin-top: 12px;
+  margin-left: 5px;
+}
+
+.chzn-container-single .chzn-single:hover span:after {
+  background-position: -8px 0px
+}
+
+.chzn-container-single .chzn-single b {
+  display: none !important;
+}
+
+.sparklNewPluginCardContainer .overlay {
+  background: #d8d8d8;
+}
+
+#tabMultiButtonObj {
+  border-bottom: 1px solid #ccc;
+}
+
+
+#aboutAuthorSubcell {
+  margin-top: 30px;
+}
+
+#aboutPluginSubcell {
+  margin-top: 50px;
+}
+
+#elementsCell {
+  margin-top: 15px;
+}
+
+tr.even td.sorting_1 {
+  background: none !important;
+}
+
+tr.odd td.sorting_1 {
+  background: none !important;
+}
+
+.sorting,
+.sorting_asc,
+.sorting_desc {
+  background: none;
+  cursor: pointer;
+}
+
+.sorting:hover {
+  background: url('../img/sort_both.png') no-repeat center right #fefefe;
+}
+
+.sorting_asc:hover {
+  background: url('../img/sort_asc.png') no-repeat center right #fefefe;
+}
+
+.sorting_desc:hover {
+  background: url('../img/sort_desc.png') no-repeat center right #fefefe;
+}
+
+#sendMessageButtonObj {
+  height: 30px;
+}
+
+#sendMessageButtonObj button {
+  font-family: 'Open Sans Light';
+  background: #333e48;
+  color: #fefefe;
+}
+
+#sendMessageButtonObj button:hover {
+  background: #0098c4;
+}
+
+.imgTip {
+  position: relative;
+  font-size: 9px;
+  color: #aaa;
+  margin-top: 12px;
+  display: block;
+  text-align: center;
+  width: 160px;
+  margin: 10px auto;
+}
+
+.refreshButton {
+}
+.refreshButton button{
+  height:34px;
+  width:34px;
+  background: url('../img/refresh.png') -1px 50% no-repeat;
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  -o-border-radius:2px;
+  -ms-border-radius:2px;
+  border-radius:2px;
+  float:right;
+}
+.refreshButton button:hover{
+  background-position: -36px 50%;
+}
+
+
+.exportTableButton {
+}
+.exportTableButton span{
+  height:34px;
+  width:34px;
+  background: url('../img/exportTable.png') -1px 50% no-repeat;
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  -o-border-radius:2px;
+  -ms-border-radius:2px;
+  border-radius:2px;
+  float:right;
+}
+.exportTableButton span:hover{
+  background-position: -36px 50%;
+  background-color: inherit;
+}
+
+.exportTableButton .exportButton
+{
+    padding: inherit;
+}
+
+.exportTableButton .exportButton:hover;
+{
+    background-color: red;
+    color: inherit;
+}
+
+.export
+
+
+
+/* =============================================================================
+   TABLES
+   ========================================================================== */
+
+ .dataTables_wrapper {
+  min-height: 1px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+table{
+  border: none;
+  max-width: 100%;
+  min-width: 100%;
+  padding-top: 10px;
+  border-collapse:separate;
+  border-spacing:0px;
+  margin-top: 20px;
+}
+table tr{
+  background: #EBEDEE;
+  height: 40px;
+}
+
+/* Header */
+thead tr {
+  height: 30px;
+}
+thead th {
+  background: none;
+  color: #333e48;
+  font-size: 13px;
+  text-align: left !important;
+  font-weight: normal;
+  vertical-align: bottom;
+  font-family: 'Open Sans Semibold';
+  padding-bottom: 12px;
+  padding-top: 12px;
+  padding-left: 10px;
+}
+thead th:last-child {
+  text-align: center;
+}
+
+/* Body */
+tbody tr:nth-child(even) {
+  background: #EBEDEE;
+}
+tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+tbody td{
+  text-align: left;
+  color: #333e48;
+  font-size: 13px;
+  padding: 0px;
+  padding-left: 10px;
+  font-family: 'Open Sans';
+}
+tbody td:last-child {
+  text-align: center;
+  border-right: none;
+}
+tbody td.actionButtons {
+	padding: 0px;
+  height: 32px; /* Can't work out a percentual height with tables */
+  text-align: right;
+  width: 126px;
+}
+
+tbody td.actionButtons .buttonContainer {
+  height:100%;
+  width:100%;
+}
+tbody td.actionButtons button{
+  color: #333;
+  font-size: 13px;
+  border: 0px none;
+  box-shadow: none;
+  height: 100%;
+  width:32px;
+  vertical-align: baseline;
+  margin-left: 5px;
+}
+tbody td.actionButtons button:last-child {
+  border-right:none;
+}
+tbody td.actionButtons button:hover{
+  color:#333;
+}
+tbody tr:nth-child(even) td.actionButtons button {
+  background-color: #EBEDEE;
+}
+tbody tr:nth-child(odd) td.actionButtons button {
+  background-color: #f5f5f5;
+}
+.runEndpointButton {
+  background-image: url(../img/play.png);
+  background-repeat: no-repeat;
+}
+.deleteDashboardButton {
+  background-image: url(../img/trash.png);
+  background-repeat: no-repeat;
+  margin-left: 20px !important;
+}
+.editDashboardButton {
+  background-image: url(../img/edit.png);
+  background-repeat: no-repeat;
+}
+.deleteEndpointButton {
+  background-image: url(../img/trash.png);
+  background-repeat: no-repeat;
+  margin-left: 20px !important;
+}
+.viewDashboardButton {
+  background-image: url(../img/preview.png);
+  background-repeat: no-repeat;
+}
+.runEndpointButton,
+.deleteDashboardButton,
+.editDashboardButton,
+.deleteEndpointButton,
+.viewDashboardButton {
+  background-position: 0px 4px;
+}
+.runEndpointButton:hover,
+.deleteDashboardButton:hover,
+.editDashboardButton:hover,
+.deleteEndpointButton:hover,
+.viewDashboardButton:hover {
+  background-position: -32px 4px;
+}
+tbody tr td.actionButtons button {
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  -moz-transition: opacity .2s;
+  -ms-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+}
+tbody tr:hover td.actionButtons button {
+  opacity: 1;
+  -webkit-transition: opacity .2s;
+  -moz-transition: opacity .2s;
+  -ms-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+}
+/*tbody td.actionButtons .numButtons-1 button{
+  width:100%;
+}
+tbody td.actionButtons .numButtons-2 button{
+  width:50%;
+}
+tbody td.actionButtons .numButtons-3 button{
+  width:33.3333333%;
+}
+tbody td.actionButtons .numButtons-4 button{
+  width:25%;
+}*/
+
+
+table tr.groupHeader.group0{
+    background: inherit;
+}
+
+table tr.groupHeader.group0 td{
+    background: inherit;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+table tr.groupHeader.preSpace {
+    height: 10px;
+    background: none;
+}
+
+table tr.groupHeader.postSpace {
+    height: 10px;
+    background: none;
+}
+
+
+
+
+
+
+/* =============================================================================
+   Elements Baseline
+   ========================================================================== */
+
+button {
+  cursor:pointer;
+  border:none;
+  width: 100%;
+  height: 100%;
+}
+
+.pentaho-toggle-button {
+  height:100%;
+  display: inline-block;
+}
+.pentaho-toggle-button button {
+  width: 100%;
+  height:100%;
+  text-align: center;
+  font-weight: lighter;
+  vertical-align: baseline;
+  float: left;
+  cursor: pointer;
+  padding:0;
+}
+.boxshadow .pentaho-toggle-button button {
+  box-shadow: none;
+  border:none;
+}
+
+
+
+
+
+
+
+/**** Chosen Select *****/
+/* All Chosen elements */
+.chzn-container{
+  /*height:100%;
+  border: 4px solid #EBEDEE;
+  min-width:160px;
+  font-size: 12px;*/
+  height: 100%;
+  border-top: 5px solid #EBEDEE;
+  font-size: 13px;
+  margin-left: -5px;
+}
+
+.chzn-container .chzn-drop {
+  background: none;
+  min-width: 100%;
+  border: 0 none;
+  border-radius: 0px;
+  margin: 0px;
+  margin-top:2px;
+  height:auto;
+  background: rgba(255,255,255,0.5);
+  margin-left: 4px;
+}
+.chzn-container .chzn-results {
+  overflow: hidden;
+  padding: 0px;
+  width: 100%;
+  margin:0px;
+}
+.chzn-drop  .chzn-search{
+  display: none;
+}
+.chzn-drop  .chzn-results li{
+  line-height: 20px;
+  height: 20px;
+  color: #333e48;
+  text-indent: 4px;
+  border-bottom: none;
+  background: none;
+  padding: 0px 7px 8px 0px;
+  display: block;
+  width: auto;
+}
+.chzn-drop .chzn-results li:last-child{
+  border-bottom:none;
+}
+.chzn-drop .chzn-results li:hover {
+  background: rgba(255,255,255,.5);
+  color:#0098c4;
+}
+
+/* Single Select */
+.chzn-container-single .chzn-single{
+  background: none;
+  color: #333e48;
+  border-radius: 0px;
+  border:none;
+  height: 100%;
+  min-width: 100%;
+  line-height: 24px;
+}
+.chzn-container-active .chzn-single {
+    box-shadow: none;
+}
+.chzn-container-single .chzn-single.chzn-single-with-drop,
+.chzn-container-single .chzn-single:hover{
+  box-shadow: none;
+  border:none;
+  background:none;
+  color:#333e48;
+}
+.noResults .chzn-container-single .chzn-single,
+.noResults .chzn-container-single .chzn-single.chzn-single-with-drop,
+.noResults .chzn-container-single .chzn-single:hover{
+  color:#aaa;
+  cursor:default;
+}
+.noResults .chzn-container-single .chzn-single span, .noResults .chzn-container-single .chzn-single.chzn-single-with-drop span, .noResults .chzn-container-single .chzn-single span:hover {
+  color: #aaa;
+}
+
+.noResults .chzn-container-single .chzn-single span:after,
+.noResults .chzn-container-single .chzn-single.chzn-single-with-drop span:after,
+.noResults .chzn-container-single .chzn-single:hover span:after{
+  background-position: -16px 0px;
+}
+
+.chzn-container .chzn-results .highlighted {
+  background: none;
+  color: #333e48;
+}
+
+.chzn-container-single .chzn-single div{ /* Arrow container */
+  background: none;
+  border:none;
+  width:22px;
+}
+.chzn-container-single .chzn-single div b{
+  width:18px;
+  height:11px;
+  display:inline-block;
+  background: url('../img/arrow.png') -4px 50% no-repeat transparent;
+}
+.chzn-container-single .chzn-single-with-drop div b,
+.chzn-container-single .chzn-single:hover div b{ /* Arrow */
+  background-position: -28px 50%;
+}
+.noResults .chzn-container-single div b,
+.noResults .chzn-container-single .chzn-single-with-drop div b,
+.noResults .chzn-container-single .chzn-single:hover div b{ /* Arrow */
+  background-position: -28px 50%;
+}
+
+.chzn-container .chzn-results .active-result.result-selected {
+  background: none;
+  color: #333e48;
+}
+
+.chzn-container .chzn-drop {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  top: 26px !important;
+}
+
+
+
+
+
+
+/* =============================================================================
+   Other 
+   ========================================================================== */
+
+
+.container .blockElement img {
+  display:none;
+}
+
+.mainHeader{
+	font-size: 25px;
+	text-align: left;
+	font-size: 35px;
+	color: #333e48;
+	font-family: 'Open Sans Light';
+}
+
+.mainHeader:after{
+	content: '';  
+	width: 100px;
+	height: 4px;
+	background: #0098c4;
+	margin-bottom: 20px;
+
+}
+
+.mainHeader.clearfix:after{
+	visibility: visible;
+}
+
+

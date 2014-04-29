@@ -1,0 +1,888 @@
+{
+ "layout": {
+  "title": "variableInfo",
+  "rows": [
+   {
+    "id": "18719a16-8326-665c-716d-51d7c3176388",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "svgCss",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": ".axis text {\n  font: 10px sans-serif;\n}\n\n.axis path,\n.axis line {\n  fill: none;\n  stroke: #000;\n  shape-rendering: crispEdges;\n}\n\n.bar {\n  fill: steelblue;\n  fill-opacity: .9;\n}\n\n.x.axis path {\n  display: none;\n} ",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
+    "id": "b289878b-b497-6f18-7208-4de3d2c35f84",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "projectCSS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "/pentaho/api/repos/d3ComponentLibrary/static/custom/css/d3ComponentLibrary.css",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "773718cc-497c-02c8-897b-35767e3e4760",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "rowTitle",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "mainHeader",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "26a52e92-91ae-93fd-621e-a263052a4bd4",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "773718cc-497c-02c8-897b-35767e3e4760",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "D3 Component Gallery ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "dd267003-1a48-12bf-daff-e9afee47772b",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "vizName",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "h2",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d0b2c100-8a42-3dda-47e5-da9630bf5933",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "dd267003-1a48-12bf-daff-e9afee47772b",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "D3 Component ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a780699f-f20f-735e-dbfd-6f22c386237f",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "vizDescription",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "230282fb-f5db-d9df-cc6c-e2a46d85a32d",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "a780699f-f20f-735e-dbfd-6f22c386237f",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<p>\n    Generic D3 component. Refer to to  \n    <a href=\"http://d3js.org/\">d3.js</a> homepage for more information\n</p>\n\n<p>\n\n    This is the lowest level component for d3, where the developer just specifies\n    the script to be used\n    \n</p> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d8a5039b-f88e-d1fd-2be0-540c608b95e2",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "exampleTitle",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "h2",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d4cf60a1-380d-dfca-e937-0ac1fda6493a",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "d8a5039b-f88e-d1fd-2be0-540c608b95e2",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "Example ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "72486c15-e6d2-d1b4-a18f-1aa7975362e1",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "input",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "2836fb2e-2058-f580-94b7-a988248af501",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "exampleObj",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "865559a2-22d3-8560-78f2-8dce53a91fe0",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "documentationTitle",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "h2",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "2ac68c6a-6373-a02c-3bf4-5f7dda674c8b",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "865559a2-22d3-8560-78f2-8dce53a91fe0",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "Documentation and Usage ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "6a081b1b-5828-1240-9930-f9c5b53c1ea0",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "documentation",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "8140ee19-4489-72eb-af85-fc1319eaf9f2",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "6a081b1b-5828-1240-9930-f9c5b53c1ea0",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<p>\n    This component will work when provided any d3 code, so all the dataset\n    structure depends on the implementation itself.\n</p> \n\n<p>\n    The idea behind adapting a d3 example from the galery is very simple: Try\n    to maintain the majority of the original code, and just allow to configure\n    from CDE the specific options. Usually it's around dataset, height, width, \n    colors and any extra specific options. Up to the author to decide.\n</p> \n\n\n<h3>Author</h3>\n\nPedro Alves - Webdetails\n\n\n<h3>Result Set</h3>\n\n<div class=\"well\"><p>\n\nThis resultset (if any) depends entirely on the custom code. On the provided\nexample, it requires a resultset with 2 columns, one for label and other for\nfrequency\n\n<table class=\"resultsetTable\">\n    <tr><th>Column</th><th>Description</th><th>Name required?</th></tr>\n    \n    <tr><td>letter</td><td>The letter to study the frequency</td><td>Yes</td></tr>    \n    <tr><td>frequency</td><td>The numerical frequency of the occurence</td><td>Yes</td></tr>    \n    \n</table>\n\n\n</p></div>\n\n\n\n<h3>Options</h3>\n \n<div class=\"well\"><p>\n    \n    Here are the specific options to add to the generic CDF options:\n    \n    <dl>\n        <dt>customfunction</dt>\n        <dd>The function that will render the vizualization</dd>  \n    </dl>\n    \n</p></div>\n \n\n<h3>Example function</h3>\n\n<div class=\"well\"><p>\n\n\nThis is an example function. Notice that the only changes to the \n<a href=\"http://bl.ocks.org/mbostock/raw/3885705/\">original code</a> were:\n\n<ul>\n    <li>Replaced the datasource call with the ones we have with an auxiliary method <i>cdaResultToD3Array</i></li>\n    <li>WIDTH / HEIGHT</li>\n</ul>\n\n<blockquote>\n    <pre>\n        \n function f(dataset){\n    \n    /* This is the code we got from d3 wiki with small changes */\n     \n    var data = this.cdaResultToD3Array(dataset);\n    \n     \n    var margin = {top: 20, right: 20, bottom: 30, left: 40},\n        width = this.getWidth() - margin.left - margin.right,\n        height = this.getHeight() - margin.top - margin.bottom;\n    \n    var formatPercent = d3.format(\".0%\");\n    \n    var x = d3.scale.ordinal()\n        .rangeRoundBands([0, width], .1, 1);\n    \n    var y = d3.scale.linear()\n        .range([height, 0]);\n    \n    var xAxis = d3.svg.axis()\n        .scale(x)\n        .orient(\"bottom\");\n    \n    var yAxis = d3.svg.axis()\n        .scale(y)\n        .orient(\"left\")\n        .tickFormat(formatPercent);\n    \n    var svg = d3.select(\"#\"+this.htmlObject).append(\"svg\")\n        .attr(\"width\", width + margin.left + margin.right)\n        .attr(\"height\", height + margin.top + margin.bottom)\n      .append(\"g\")\n        .attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\");\n    \n    // Commenting this out, we have data already\n    // d3.tsv(\"/pentaho/api/repos/d3ComponentLibrary/static/custom/data/data.tsv\", function(error, data) {\n    \n      data.forEach(function(d) {\n        d.frequency = +d.frequency;\n      });\n    \n      x.domain(data.map(function(d) { return d.letter; }));\n      y.domain([0, d3.max(data, function(d) { return d.frequency; })]);\n    \n      svg.append(\"g\")\n          .attr(\"class\", \"x axis\")\n          .attr(\"transform\", \"translate(0,\" + height + \")\")\n          .call(xAxis);\n    \n      svg.append(\"g\")\n          .attr(\"class\", \"y axis\")\n          .call(yAxis)\n        .append(\"text\")\n          .attr(\"transform\", \"rotate(-90)\")\n          .attr(\"y\", 6)\n          .attr(\"dy\", \".71em\")\n          .style(\"text-anchor\", \"end\")\n          .text(\"Frequency\");\n    \n      svg.selectAll(\".bar\")\n          .data(data)\n        .enter().append(\"rect\")\n          .attr(\"class\", \"bar\")\n          .attr(\"x\", function(d) { return x(d.letter); })\n          .attr(\"width\", x.rangeBand())\n          .attr(\"y\", function(d) { return y(d.frequency); })\n          .attr(\"height\", function(d) { return height - y(d.frequency); });\n    \n      d3.select(\"input\").on(\"change\", change);\n    \n      var sortTimeout = setTimeout(function() {\n        d3.select(\"input\").property(\"checked\", true).each(change);\n      }, 2000);\n    \n      function change() {\n        clearTimeout(sortTimeout);\n    \n        // Copy-on-write since tweens are evaluated after a delay.\n        var x0 = x.domain(data.sort(this.checked\n            ? function(a, b) { return b.frequency - a.frequency; }\n            : function(a, b) { return d3.ascending(a.letter, b.letter); })\n            .map(function(d) { return d.letter; }))\n            .copy();\n    \n        var transition = svg.transition().duration(750),\n            delay = function(d, i) { return i * 50; };\n    \n        transition.selectAll(\".bar\")\n            .delay(delay)\n            .attr(\"x\", function(d) { return x0(d.letter); });\n    \n        transition.select(\".x.axis\")\n            .call(xAxis)\n          .selectAll(\"g\")\n            .delay(delay);\n      }\n    // });\n    \n    \n}\n    </pre>\n</blockquote> \n\n</p></div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "98331e9b-0428-b197-4f93-bef320c568c2",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "value": "100",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ]
+ },
+ "components": {
+  "rows": [
+   {
+    "id": "D3COMPONENTS",
+    "name": "D3 Components",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "D3 Components",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "732d4120-ad3d-a145-6e72-a429b154aa99",
+    "type": "Componentsd3",
+    "typeDesc": "D3 Component Component",
+    "parent": "D3COMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "d3Component",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "customfunction",
+      "value": "function f(dataset){\n    \n    /* This is the code we got from d3 wiki with small changes */\n     \n    var data = this.cdaResultToD3Array(dataset);\n    \n     \n    var margin = {top: 20, right: 20, bottom: 30, left: 40},\n        width = this.getWidth() - margin.left - margin.right,\n        height = this.getHeight() - margin.top - margin.bottom;\n    \n    var formatPercent = d3.format(\".0%\");\n    \n    var x = d3.scale.ordinal()\n        .rangeRoundBands([0, width], .1, 1);\n    \n    var y = d3.scale.linear()\n        .range([height, 0]);\n    \n    var xAxis = d3.svg.axis()\n        .scale(x)\n        .orient(\"bottom\");\n    \n    var yAxis = d3.svg.axis()\n        .scale(y)\n        .orient(\"left\")\n        .tickFormat(formatPercent);\n    \n    var svg = d3.select(\"#\"+this.htmlObject).append(\"svg\")\n        .attr(\"width\", width + margin.left + margin.right)\n        .attr(\"height\", height + margin.top + margin.bottom)\n      .append(\"g\")\n        .attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\");\n    \n    // Commenting this out, we have data already\n    // d3.tsv(\"/pentaho/api/repos/d3ComponentLibrary/static/custom/data/data.tsv\", function(error, data) {\n    \n      data.forEach(function(d) {\n        d.frequency = +d.frequency;\n      });\n    \n      x.domain(data.map(function(d) { return d.letter; }));\n      y.domain([0, d3.max(data, function(d) { return d.frequency; })]);\n    \n      svg.append(\"g\")\n          .attr(\"class\", \"x axis\")\n          .attr(\"transform\", \"translate(0,\" + height + \")\")\n          .call(xAxis);\n    \n      svg.append(\"g\")\n          .attr(\"class\", \"y axis\")\n          .call(yAxis)\n        .append(\"text\")\n          .attr(\"transform\", \"rotate(-90)\")\n          .attr(\"y\", 6)\n          .attr(\"dy\", \".71em\")\n          .style(\"text-anchor\", \"end\")\n          .text(\"Frequency\");\n    \n      svg.selectAll(\".bar\")\n          .data(data)\n        .enter().append(\"rect\")\n          .attr(\"class\", \"bar\")\n          .attr(\"x\", function(d) { return x(d.letter); })\n          .attr(\"width\", x.rangeBand())\n          .attr(\"y\", function(d) { return y(d.frequency); })\n          .attr(\"height\", function(d) { return height - y(d.frequency); });\n    \n      d3.select(\"input\").on(\"change\", change);\n    \n      var sortTimeout = setTimeout(function() {\n        d3.select(\"input\").property(\"checked\", true).each(change);\n      }, 2000);\n    \n      function change() {\n        clearTimeout(sortTimeout);\n    \n        // Copy-on-write since tweens are evaluated after a delay.\n        var x0 = x.domain(data.sort(this.checked\n            ? function(a, b) { return b.frequency - a.frequency; }\n            : function(a, b) { return d3.ascending(a.letter, b.letter); })\n            .map(function(d) { return d.letter; }))\n            .copy();\n    \n        var transition = svg.transition().duration(750),\n            delay = function(d, i) { return i * 50; };\n    \n        transition.selectAll(\".bar\")\n            .delay(delay)\n            .attr(\"x\", function(d) { return x0(d.letter); });\n    \n        transition.select(\".x.axis\")\n            .call(xAxis)\n          .selectAll(\"g\")\n            .delay(delay);\n      }\n    // });\n    \n    \n}\n\n",
+      "type": "JavaScript"
+     },
+     {
+      "name": "dataSource",
+      "value": "dataTsv",
+      "type": "Datasource"
+     },
+     {
+      "name": "width",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "200",
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:exampleObj}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "SELECTORS",
+    "name": "Selects",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Selects",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "4eedc27f-0120-835b-02cb-808b4272ef09",
+    "type": "Componentscheck",
+    "typeDesc": "Check Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "sort",
+      "type": "Id"
+     },
+     {
+      "name": "separator",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:sortParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "valueAsId",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "dataSource",
+      "value": "",
+      "type": "Datasource"
+     },
+     {
+      "name": "valuesArray",
+      "value": "[[\"true\",\"Sort\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:input}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "GENERIC",
+    "name": "Generic",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Generic",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "d19a58e0-0751-5579-f3e3-75d78b77f9f2",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "sortParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "false",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "D3COMPONENTLIBRARY_CPKENDPOINTS",
+    "name": "D3COMPONENTLIBRARY Endpoints",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "D3COMPONENTLIBRARY Endpoints",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "729613bf-9452-f693-5c0d-c0ad1637e190",
+    "type": "Componentsd3ComponentLibrary_dataTsv_CPKENDPOINT",
+    "typeDesc": "dataTsv Endpoint",
+    "parent": "D3COMPONENTLIBRARY_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dataTsv",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Json",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "d3ComponentLibrary",
+    "meta_endpoint": "dataTsv"
+   }
+  ]
+ },
+ "filename": "/system/d3ComponentLibrary/dashboards/d3Component.cdfde"
+}
