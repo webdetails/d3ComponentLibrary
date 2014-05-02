@@ -531,14 +531,14 @@
     ]
    },
    {
-    "id": "836582d1-bb10-1657-2ee9-d342fac33ca6",
-    "type": "Componentsd3Component",
-    "typeDesc": "D3 Generic Component",
+    "id": "24c772c1-f923-996d-6287-fa20350b8dfe",
+    "type": "Componentsd3CalendarView",
+    "typeDesc": "D3 Calendar View Component",
     "parent": "D3COMPONENTS",
     "properties": [
      {
       "name": "name",
-      "value": "d3Component",
+      "value": "calendarView",
       "type": "Id"
      },
      {
@@ -552,13 +552,8 @@
       "type": "ValuesArray"
      },
      {
-      "name": "customfunction",
-      "value": "function f(){\n    \n     \n    var margin = {top: 20, right: 20, bottom: 30, left: 40},\n        width = 960 - margin.left - margin.right,\n        height = 500 - margin.top - margin.bottom;\n    \n    var formatPercent = d3.format(\".0%\");\n    \n    var x = d3.scale.ordinal()\n        .rangeRoundBands([0, width], .1, 1);\n    \n    var y = d3.scale.linear()\n        .range([height, 0]);\n    \n    var xAxis = d3.svg.axis()\n        .scale(x)\n        .orient(\"bottom\");\n    \n    var yAxis = d3.svg.axis()\n        .scale(y)\n        .orient(\"left\")\n        .tickFormat(formatPercent);\n    \n    var svg = d3.select(\"body\").append(\"svg\")\n        .attr(\"width\", width + margin.left + margin.right)\n        .attr(\"height\", height + margin.top + margin.bottom)\n      .append(\"g\")\n        .attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\");\n    \n    d3.tsv(\"http://bl.ocks.org/mbostock/raw/3885705/data.tsv\", function(error, data) {\n    \n      data.forEach(function(d) {\n        d.frequency = +d.frequency;\n      });\n    \n      x.domain(data.map(function(d) { return d.letter; }));\n      y.domain([0, d3.max(data, function(d) { return d.frequency; })]);\n    \n      svg.append(\"g\")\n          .attr(\"class\", \"x axis\")\n          .attr(\"transform\", \"translate(0,\" + height + \")\")\n          .call(xAxis);\n    \n      svg.append(\"g\")\n          .attr(\"class\", \"y axis\")\n          .call(yAxis)\n        .append(\"text\")\n          .attr(\"transform\", \"rotate(-90)\")\n          .attr(\"y\", 6)\n          .attr(\"dy\", \".71em\")\n          .style(\"text-anchor\", \"end\")\n          .text(\"Frequency\");\n    \n      svg.selectAll(\".bar\")\n          .data(data)\n        .enter().append(\"rect\")\n          .attr(\"class\", \"bar\")\n          .attr(\"x\", function(d) { return x(d.letter); })\n          .attr(\"width\", x.rangeBand())\n          .attr(\"y\", function(d) { return y(d.frequency); })\n          .attr(\"height\", function(d) { return height - y(d.frequency); });\n    \n      d3.select(\"input\").on(\"change\", change);\n    \n      var sortTimeout = setTimeout(function() {\n        d3.select(\"input\").property(\"checked\", true).each(change);\n      }, 2000);\n    \n      function change() {\n        clearTimeout(sortTimeout);\n    \n        // Copy-on-write since tweens are evaluated after a delay.\n        var x0 = x.domain(data.sort(this.checked\n            ? function(a, b) { return b.frequency - a.frequency; }\n            : function(a, b) { return d3.ascending(a.letter, b.letter); })\n            .map(function(d) { return d.letter; }))\n            .copy();\n    \n        var transition = svg.transition().duration(750),\n            delay = function(d, i) { return i * 50; };\n    \n        transition.selectAll(\".bar\")\n            .delay(delay)\n            .attr(\"x\", function(d) { return x0(d.letter); });\n    \n        transition.select(\".x.axis\")\n            .call(xAxis)\n          .selectAll(\"g\")\n            .delay(delay);\n      }\n    });\n    \n    \n}",
-      "type": "JavaScript"
-     },
-     {
       "name": "dataSource",
-      "value": "",
+      "value": "djiCsv",
       "type": "Datasource"
      },
      {
@@ -568,11 +563,6 @@
      },
      {
       "name": "width",
-      "value": "",
-      "type": "Integer"
-     },
-     {
-      "name": "height",
       "value": "",
       "type": "Integer"
      },
@@ -620,13 +610,59 @@
       "name": "tooltip",
       "value": "",
       "type": "Html"
+     },
+     {
+      "name": "cccTooltipFormat",
+      "value": "function f(d,v){\n  return \"Date: \" + d +\"; Value: \" + v;   \n}",
+      "type": "JavaScript"
      }
     ]
    }
   ]
  },
  "datasources": {
-  "rows": []
+  "rows": [
+   {
+    "id": "D3COMPONENTLIBRARY_CPKENDPOINTS",
+    "name": "D3COMPONENTLIBRARY Endpoints",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "D3COMPONENTLIBRARY Endpoints",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "986b8b55-c320-05ad-569a-15286188c085",
+    "type": "Componentsd3ComponentLibrary_djiCsv_CPKENDPOINT",
+    "typeDesc": "djiCsv Endpoint",
+    "parent": "D3COMPONENTLIBRARY_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "djiCsv",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT_2cols",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Json",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "d3ComponentLibrary",
+    "meta_endpoint": "djiCsv"
+   }
+  ]
  },
  "filename": "/system/d3ComponentLibrary/dashboards/CalendarView.cdfde"
 }
