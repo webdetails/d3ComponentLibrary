@@ -3,6 +3,29 @@
   "title": "variableInfo",
   "rows": [
    {
+    "id": "3e0fdaef-623a-dfcc-3d1a-07028632a130",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "projectJS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "../../../api/repos/d3ComponentLibrary/static/custom/js/d3ComponentLibrary.js",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     }
+    ]
+   },
+   {
     "id": "b289878b-b497-6f18-7208-4de3d2c35f84",
     "type": "LayoutResourceFile",
     "typeDesc": "Resource",
@@ -15,7 +38,7 @@
      },
      {
       "name": "resourceFile",
-      "value": "/pentaho/api/repos/d3ComponentLibrary/static/custom/css/d3ComponentLibrary.css",
+      "value": "../../../api/repos/d3ComponentLibrary/static/custom/css/d3ComponentLibrary.css",
       "type": "ResourceFile"
      },
      {
@@ -457,7 +480,7 @@
      },
      {
       "name": "cssClass",
-      "value": "",
+      "value": "visualizationsTable",
       "type": "String"
      }
     ]
@@ -536,12 +559,12 @@
      },
      {
       "name": "colHeaders",
-      "value": "[\"Group\",\"Variable\",\"Value\"]",
+      "value": "[\"Visualization\",\" \"]",
       "type": "Array"
      },
      {
       "name": "colTypes",
-      "value": "[\"groupHeaders\",\"string\",\"string\"]",
+      "value": "[\"string\",\"visualizationImg\"]",
       "type": "colTypesCustom"
      },
      {
@@ -551,12 +574,12 @@
      },
      {
       "name": "colWidths",
-      "value": "[\"30%\",\"70%\"]",
+      "value": "[\"70%\",\"30%\"]",
       "type": "Array"
      },
      {
       "name": "colSortable",
-      "value": "[]",
+      "value": "[\"true\",\"false\"]",
       "type": "Array"
      },
      {
@@ -611,7 +634,7 @@
      },
      {
       "name": "dataSource",
-      "value": "systemInfo",
+      "value": "getVisualizations",
       "type": "Datasource"
      },
      {
@@ -696,7 +719,7 @@
      },
      {
       "name": "clickAction",
-      "value": "",
+      "value": "function f(row){\n \n  window.location.href = row.tableData[row.rowIdx][1];\n    \n}",
       "type": "JavaScript"
      }
     ]
@@ -836,28 +859,28 @@
  "datasources": {
   "rows": [
    {
-    "id": "SPARKL_CPKENDPOINTS",
-    "name": "SPARKL Endpoints",
+    "id": "D3COMPONENTLIBRARY_CPKENDPOINTS",
+    "name": "D3COMPONENTLIBRARY Endpoints",
     "type": "Label",
     "typeDesc": "<i>Group</i>",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "Group",
-      "value": "SPARKL Endpoints",
+      "value": "D3COMPONENTLIBRARY Endpoints",
       "type": "Label"
      }
     ]
    },
    {
-    "id": "931e5957-4014-1090-146b-b7789eea58df",
-    "type": "Componentssparkl_getVariableInfo_CPKENDPOINT",
-    "typeDesc": "getVariableInfo Endpoint",
-    "parent": "SPARKL_CPKENDPOINTS",
+    "id": "f8dca2b0-f5bf-b4f5-ca4c-8e7f4ebadb7a",
+    "type": "Componentsd3ComponentLibrary_getVisualizations_CPKENDPOINT",
+    "typeDesc": "getVisualizations Endpoint",
+    "parent": "D3COMPONENTLIBRARY_CPKENDPOINTS",
     "properties": [
      {
       "name": "name",
-      "value": "getVariableInfo",
+      "value": "getVisualizations",
       "type": "Id"
      },
      {
@@ -872,93 +895,8 @@
      }
     ],
     "meta": "CPK",
-    "meta_pluginId": "sparkl",
-    "meta_endpoint": "getVariableInfo"
-   },
-   {
-    "id": "SCRIPTING",
-    "name": "SCRIPTING Queries",
-    "type": "Label",
-    "typeDesc": "<i>Group</i>",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "Group",
-      "value": "SCRIPTING Queries",
-      "type": "Label"
-     }
-    ]
-   },
-   {
-    "id": "6ffb4845-6ced-275f-a446-ba57686784c7",
-    "type": "Componentsscriptable_scripting",
-    "typeDesc": "scriptable over scripting",
-    "parent": "SCRIPTING",
-    "properties": [
-     {
-      "name": "name",
-      "value": "systemInfo",
-      "type": "Id"
-     },
-     {
-      "name": "language",
-      "value": "beanshell",
-      "type": "String"
-     },
-     {
-      "name": "initscript",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "access",
-      "value": "public",
-      "type": "Access"
-     },
-     {
-      "name": "query",
-      "value": "import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;\nimport org.pentaho.platform.engine.core.system.*;\nimport org.pentaho.platform.api.engine.*;\nimport org.pentaho.platform.web.http.session.PentahoHttpSession;\nimport java.util.Arrays;\nimport java.util.Locale;\nimport java.util.Map;\nimport java.util.TreeMap;\nimport org.pentaho.reporting.engine.classic.core.ClassicEngineBoot;\nimport org.pentaho.reporting.engine.classic.core.ClassicEngineInfo;\nimport org.pentaho.reporting.engine.classic.core.metadata.DataFactoryRegistry;\nimport org.pentaho.reporting.engine.classic.core.metadata.ElementTypeRegistry;\nimport org.pentaho.reporting.engine.classic.core.metadata.ExpressionRegistry;\nimport org.pentaho.reporting.engine.classic.core.metadata.MetaData;\nimport org.pentaho.reporting.engine.classic.core.util.TypedTableModel;\nimport org.pentaho.reporting.libraries.base.boot.Module;\nimport org.pentaho.reporting.libraries.base.boot.PackageManager;\n\n\nString[] columnNames = new String[3];\ncolumnNames[0] = \"Group\";\ncolumnNames[1] = \"Variable\";\ncolumnNames[2] = \"Value\";\n\nClass[] columnTypes = new Class[3];\ncolumnTypes[0] = String.class;\ncolumnTypes[1] = String.class;\ncolumnTypes[2] = String.class;\n\nTypedTableModel model = new TypedTableModel( columnNames, columnTypes);\n\n/*\n *  Generic functions\n */\n\n  Map collectEngineData()\n  {\n    TreeMap s = new TreeMap();\n    s.put(\"Version\", ClassicEngineInfo.getInstance().getVersion());\n    return s;\n  }\n\n  Map collectModules()\n  {\n    PackageManager packageManager = ClassicEngineBoot.getInstance().getPackageManager();\n    Module[] modules = packageManager.getAllModules();\n    TreeMap s = new TreeMap();\n    for (int i = 0; i < modules.length; i++)\n    {\n      Module module = modules[i];\n      String av = packageManager.isModuleAvailable(module) ? \"Available\" : \"Disabled\";\n      s.put(module.getName(), av);\n    }\n    return s;\n  }\n\n  Map collectData(MetaData[] data)\n  {\n    TreeMap s = new TreeMap();\n    for (int i = 0; i < data.length; i++)\n    {\n      MetaData metaData = data[i];\n      try{\n        s.put(metaData.getDisplayName(Locale.ENGLISH), metaData.getName());\n      }catch(Exception e){\n        System.out.println(\"Failed to collect data for \" + metaData.getName());\n      }\n    }\n    return s;\n  }\n\n  void add (TypedTableModel model, String type, Map map)\n  {\n    String[] keys = (String[]) map.keySet().toArray(new String[map.size()]);\n    Arrays.sort(keys);\n    for (int i = 0; i < keys.length; i++)\n    {\n      String key = keys[i];\n      model.addRow(new Object[]{type, key, map.get(key)});\n    }\n  }\n  \n  String getAttributeValue(Object tmp){\n\n    // System.out.println(\"Attribute: \" + x + \"; Type:\" + tmp.getClass());\n    String val = (tmp != null) ? tmp.toString() : \"null\";\n    String typ = (tmp != null) ? tmp.getClass().toString() : \"null\";\n    \n    return val;\n  }\n  \n  void collectPentahoSessionAttributes (String title, PentahoHttpSession session)\n  {\n  \n    for(java.util.Iterator e2 = session.getAttributeNames();e2.hasNext() ;){\n\n    x = (String)e2.next();\n    tmp = pentahoSession.getAttribute(x);\n    System.out.println(\"  XXXXXXXX \" + x +\" = \"+tmp);\n    //model.addRow( new Object[]{title, val, getAttributeValue(tmp)});\n    }\n\n  }\n\n\n/*\n *  Accessing the variables needed\n */\n\n\n\nThread.currentThread().setContextClassLoader( org.pentaho.platform.engine.core.system.PentahoSessionHolder.class.getClassLoader() );\nfinal IPentahoSession pentahoSession = PentahoSessionHolder.getSession();\n\n\nClassLoader contextCL = Thread.currentThread().getContextClassLoader();\ntry {\n\n    Thread.currentThread().setContextClassLoader( org.pentaho.platform.engine.core.system.PentahoSessionHolder.class.getClassLoader() );\n    final IPentahoSession pentahoSession = PentahoSessionHolder.getSession();\n} catch ( Exception e ) {\n} finally {\n  Thread.currentThread().setContextClassLoader( contextCL );\n}\n\n\n/*\n *  Getting Pentaho Session Info\n */\n\n\nString x = null;\nObject tmp = null;\n\n\nfor(java.util.Iterator e2 = pentahoSession.getAttributeNames();e2.hasNext() ;){\n\n    x = (String)e2.next();\n    tmp = pentahoSession.getAttribute(x);\n    \n\n    System.out.println(\"Attribute: \" + x + \"; Type:\" + tmp.getClass());\n    \n    if(tmp instanceof String){\n        model.addRow( new Object[]{\"Pentaho Session Variable\", x, getAttributeValue(tmp)});\n    }\n    else if(tmp instanceof PentahoHttpSession){\n    \n    }\n    else{\n        //System.out.println(\"Name: \" + x + \"; Class: \" + tmp.getClass().getName() );\n        model.addRow( new Object[]{\"Pentaho Session Variable\", x, getAttributeValue(tmp)});\n    }\n}\n\n/*\n *  Get generic info\n */\n\n\nmodel.addRow( new Object[]{\"Runtime Information\", \"Processors\", Runtime.getRuntime().availableProcessors()});\nmodel.addRow( new Object[]{\"Runtime Information\", \"Max Memory\", Runtime.getRuntime().maxMemory()});\nmodel.addRow( new Object[]{\"Runtime Information\", \"Total Memory\", Runtime.getRuntime().totalMemory()});\n\n\n/*\n *  HttpSession Info\n */\n\njava.lang.reflect.Field field = pentahoSession.getClass().getDeclaredField(\"session\");\nfield.setAccessible(true); // this basically overrides the private setting in the PentahoHttpSession class\njavax.servlet.http.HttpSession httpSession = (javax.servlet.http.HttpSession)field.get(pentahoSession);\n\nfor(java.util.Enumeration e3 = httpSession.getServletContext().getInitParameterNames(); e3.hasMoreElements() ;){\n    x = (String)e3.nextElement();\n    tmp = httpSession.getServletContext().getInitParameter(x);\n    model.addRow( new Object[]{\"Pentaho Servlet Context Init Attribute\", x, tmp});\n}\n\n\n/*\n *  Get reporting info\n */\n\n\nadd(model, \"System Properties\", System.getProperties());\nadd(model, \"Environment\", System.getenv());\nadd(model, \"Reporting Engine\", collectEngineData());\nadd(model, \"Reporting Modules\", collectModules());\n//add(model, \"Reporting Data-Factories\", collectData(DataFactoryRegistry.getInstance().getAll()));\nadd(model, \"Reporting Elements\", collectData(ElementTypeRegistry.getInstance().getAllElementTypes()));\nadd(model, \"Reporting Expressions\", collectData(ExpressionRegistry.getInstance().getAllExpressionMetaDatas()));\n\n\nreturn model;",
-      "type": "SqlQuery"
-     },
-     {
-      "name": "parameters",
-      "value": "[]",
-      "type": "CdaParameters"
-     },
-     {
-      "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
-     },
-     {
-      "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
-     },
-     {
-      "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
-     },
-     {
-      "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
-     },
-     {
-      "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
-     },
-     {
-      "name": "cache",
-      "value": "false",
-      "type": "Boolean"
-     }
-    ],
-    "meta": "CDA",
-    "meta_conntype": "scripting.scripting",
-    "meta_datype": "scriptable"
+    "meta_pluginId": "d3ComponentLibrary",
+    "meta_endpoint": "getVisualizations"
    }
   ]
  },

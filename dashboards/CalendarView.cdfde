@@ -76,7 +76,7 @@
      },
      {
       "name": "html",
-      "value": "D3 Component Gallery ",
+      "value": "<a class=\"d3GalleryBackButton\" href=\"main\"></a> D3 Component Gallery ",
       "type": "Html"
      },
      {
@@ -469,7 +469,7 @@
      },
      {
       "name": "html",
-      "value": "<p>\n    Documentation here\n</p> \n\n ",
+      "value": "<p>\n    Calendar view that displays an yearly grid\n</p> \n\n\n<h3>Author</h3>\n\nPedro Alves - Webdetails\n\n\n<h3>Result Set</h3>\n\n<div class=\"well\"><p>\n\nThis visualization equires a resultset with 2 columns, one for the date in \n'yyyy-mm-dd' format and other for the numeric value\n\n<table class=\"resultsetTable\">\n    <tr><th>Column</th><th>Description</th><th>Name required?</th></tr>\n    \n    <tr><td>date</td><td>Date string in 'yyyy-mm-dd' format</td><td>No</td></tr>    \n    <tr><td>value</td><td>The numerical value</td><td>No</td></tr>    \n    \n</table>\n\n\n</p></div>\n\n\n\n<h3>Options</h3>\n \n<div class=\"well\"><p>\n    \n    Here are the specific options to add to the generic CDF options:\n    \n    <dl>\n        <dt>width</dt>\n        <dd>If given, will be used. If not, visualization will adapt to the \n            available container\n        </dd>  \n        <dt>cccTooltipFormat</dt>\n        <dd>Optional function to control the tooltip format. Receives \n            two arguments: <i>date</i> and <i>value</i>\n        </dd>  \n    </dl>\n    \n</p></div>\n \n\n<h3>Visualization Information</h3>\n\n<div class=\"well\"><p>\n\n\nCode was taken from \n<a href=\"http://bl.ocks.org/mbostock/raw/3885705/\">original example</a>. All\ncredits to the original author. Some modifications were made to this code:\n\n<ul>\n    <li>Replaced the datasource call to get the data from the endpoints</li>\n    <li>Width is passed from the component options</li>\n    <li>Height is calculated from width</li>\n    <li>Tooltip can optionally be formatted</li>\n</ul>\n\nThe array of colors is fixed, but can be overriden by simple CSS. The default\nis:\n\n<blockquote>\n    <pre>\n\nsvg .day {\n  fill: #fff;\n  stroke: #ccc;\n}\n\nsvg .month {\n  fill: none;\n  stroke: #000;\n  stroke-width: 2px;\n}\n\n.RdYlGn .q0-11{fill:rgb(165,0,38)}\n.RdYlGn .q1-11{fill:rgb(215,48,39)}\n.RdYlGn .q2-11{fill:rgb(244,109,67)}\n.RdYlGn .q3-11{fill:rgb(253,174,97)}\n.RdYlGn .q4-11{fill:rgb(254,224,139)}\n.RdYlGn .q5-11{fill:rgb(255,255,191)}\n.RdYlGn .q6-11{fill:rgb(217,239,139)}\n.RdYlGn .q7-11{fill:rgb(166,217,106)}\n.RdYlGn .q8-11{fill:rgb(102,189,99)}\n.RdYlGn .q9-11{fill:rgb(26,152,80)}\n.RdYlGn .q10-11{fill:rgb(0,104,55)} \n    \n</pre>\n</blockquote> \n\n</p></div> ",
       "type": "Html"
      },
      {

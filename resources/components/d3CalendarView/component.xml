@@ -11,8 +11,10 @@
   </Header>
   <Contents>
     <Model>
+      <!-- Component specific options -->
       <Property>width</Property>
       <Property>cccTooltipFormat</Property>
+      <!-- Leave this ones for every component -->
       <Definition name="chartDefinition">
           <Property>dataSource</Property>
       </Definition>
