@@ -3,7 +3,7 @@
   <Header>
     <Name>d3 CalendarView</Name>
     <IName>d3CalendarView</IName>
-    <Description>D3 Calendar View Component</Description>
+    <Description>d3 Calendar View Component</Description>
     <Category>D3COMPONENTS</Category>
     <CatDescription>D3 Components</CatDescription>
     <Type>PalleteEntry</Type>
@@ -13,7 +13,6 @@
     <Model>
       <!-- Component specific options -->
       <Property>width</Property>
-      <Property>cccTooltipFormat</Property>
       <!-- Leave this ones for every component -->
       <Definition name="chartDefinition">
           <Property>dataSource</Property>
@@ -27,6 +26,7 @@
       <Property>preExecution</Property>
       <Property>postExecution</Property>
       <Property>tooltip</Property>
+      <Property name="tooltipFormat">cccTooltipFormat</Property>
       <Property>listeners</Property>
       <Property>refreshPeriod</Property>
     </Model>
@@ -40,19 +40,6 @@
         <Dependency src="../commons/d3ComponentBase.js" version="1">d3ComponentBase</Dependency>
       </Dependencies>
       <CustomProperties>
-		<!-- <DesignerProperty>
-		  <Header>
-		    <Name>inputFormat</Name>
-		    <Parent>BaseProperty</Parent>
-		    <DefaultValue>YYYY-MM-DD</DefaultValue>
-		    <Description>Input format</Description>
-		    <Tooltip>Input date format as used by moment.js</Tooltip>
-		    <InputType>String</InputType>
-		    <OutputType>String</OutputType>
-		    <Order>30</Order>
-		    <Version>1.0</Version>
-		  </Header>
-		</DesignerProperty> -->
 	  </CustomProperties>
     </Implementation>
   </Contents>
