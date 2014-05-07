@@ -1,5 +1,5 @@
 /*
- * d3 component, using the chartComponent
+ * d3 Calendar View, using the D3ComponentBase
  */
 
 var D3CalendarViewComponent = D3ComponentBase.extend({
@@ -7,7 +7,8 @@ var D3CalendarViewComponent = D3ComponentBase.extend({
   defaultWidth: 600,
   defaultHeight: 136,
   cellSize: 17,
-  _formattingFunction: function(d, v) {
+
+  _defaultTooltipFormat: function(d, v) {
     return d + ": " + v;
   },
 
@@ -47,7 +48,6 @@ var D3CalendarViewComponent = D3ComponentBase.extend({
 
     var day = d3.time.format("%w"),
             week = d3.time.format("%U"),
-            percent = d3.format(".1%"),
             format = d3.time.format("%Y-%m-%d");
 
     var color = d3.scale.quantize()
@@ -121,6 +121,7 @@ var D3CalendarViewComponent = D3ComponentBase.extend({
     });
 
     var formattingFunction = this.cccTooltipFormat||this._formattingFunction;
+    var tooltipFormat = this.tooltipFormat || this._defaultTooltipFormat;
 
     rect.filter(function(d) {
       return d in dataIndexed;
@@ -131,6 +132,7 @@ var D3CalendarViewComponent = D3ComponentBase.extend({
             .select("title")
             .text(function(d) {
       return formattingFunction(d,dataIndexed[d]);
+          return tooltipFormat(d, dataIndexed[d]); 
     });
     
        //      });
