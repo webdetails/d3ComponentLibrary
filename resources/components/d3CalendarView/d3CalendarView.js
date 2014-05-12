@@ -120,7 +120,7 @@ var D3CalendarViewComponent = D3ComponentBase.extend({
       dataIndexed[d[0]] = d[1];
     });
 
-    var formattingFunction = this.cccTooltipFormat||this._formattingFunction;
+    var formattingFunction = this.tooltipFormat||this._formattingFunction;
     var tooltipFormat = this.tooltipFormat || this._defaultTooltipFormat;
 
     rect.filter(function(d) {
