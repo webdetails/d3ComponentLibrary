@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<DesignerComponent>
+  <Header>
+    <Name>d3 ScatterplotMatrix</Name>
+    <IName>d3ScatterplotMatrix</IName>
+    <Description>d3 Scatterplot Matrix Component</Description>
+    <Category>D3COMPONENTS</Category>
+    <CatDescription>D3 Components</CatDescription>
+    <Type>PalleteEntry</Type>
+    <Version>1.0</Version>
+  </Header>
+  <Contents>
+    <Model>
+      <!-- Component specific options -->
+      <Property>width</Property>
+      <!-- Leave this ones for every component -->
+      <Definition name="chartDefinition">
+          <Property>dataSource</Property>
+      </Definition>
+      <Property name="parameters">xActionArrayParameter</Property>
+      <Property>executeAtStart</Property>
+      <Property>preChange</Property>
+      <Property>postChange</Property>
+      <Property>postFetch</Property>
+      <Property>htmlObject</Property>
+      <Property>preExecution</Property>
+      <Property>postExecution</Property>
+      <Property>tooltip</Property>
+      <Property name="tooltipFormat">cccTooltipFormat</Property>
+      <Property>listeners</Property>
+      <Property>refreshPeriod</Property>
+    </Model>
+    <Implementation>
+      <Code src="d3ScatterplotMatrix.js"/>
+      <Styles>
+        <Style version="1.0" src="d3ScatterplotMatrix.css">d3ScatterplotMatrix</Style>
+      </Styles>
+      <Dependencies>
+        <Dependency src="../commons/lib/d3.js" version="343">d3js</Dependency>
+        <Dependency src="../commons/d3ComponentBase.js" version="1">d3ComponentBase</Dependency>
+      </Dependencies>
+      <CustomProperties>
+	  </CustomProperties>
+    </Implementation>
+  </Contents>
+</DesignerComponent>
