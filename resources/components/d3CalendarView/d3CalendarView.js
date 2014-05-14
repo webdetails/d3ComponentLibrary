@@ -44,62 +44,62 @@ var D3CalendarViewComponent = D3ComponentBase.extend({
     
     
     var width = this.getWidth(),
-            height = this.getHeight();
+        height = this.getHeight();
 
     var day = d3.time.format("%w"),
-            week = d3.time.format("%U"),
-            format = d3.time.format("%Y-%m-%d");
+        week = d3.time.format("%U"),
+        format = d3.time.format("%Y-%m-%d");
 
     var color = d3.scale.quantize()
-            .domain([minValue, maxValue])
-            .range(d3.range(11).map(function(d) {
-      return "q" + d + "-11";
-    }));
+        .domain([minValue, maxValue])
+        .range(d3.range(11).map(function(d) {
+          return "q" + d + "-11";
+        }));
 
     var svg = d3.select("#"+this.htmlObject).selectAll("svg")
-            .data(d3.range(minYear, maxYear))
-            .enter().append("svg")
-            .attr("width", width)
-            .attr("height", internalHeight)
-            .attr("class", "RdYlGn")
-            .append("g")
-            .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (internalHeight - cellSize * 7 - 1) + ")");
+        .data(d3.range(minYear, maxYear))
+      .enter().append("svg")
+        .attr("width", width)
+        .attr("height", internalHeight)
+        .attr("class", "RdYlGn")
+      .append("g")
+        .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (internalHeight - cellSize * 7 - 1) + ")");
 
     svg.append("text")
-            .attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)")
-            .style("text-anchor", "middle")
-            .text(function(d) {
-      return d;
-    });
+        .attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)")
+        .style("text-anchor", "middle")
+        .text(function(d) {
+          return d;
+        });
 
     var rect = svg.selectAll(".day")
-            .data(function(d) {
-      return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1));
-    })
-            .enter().append("rect")
-            .attr("class", "day")
-            .attr("width", cellSize)
-            .attr("height", cellSize)
-            .attr("x", function(d) {
-      return week(d) * cellSize;
-    })
-            .attr("y", function(d) {
-      return day(d) * cellSize;
-    })
-            .datum(format);
+        .data(function(d) {
+          return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1));
+        })
+      .enter().append("rect")
+        .attr("class", "day")
+        .attr("width", cellSize)
+        .attr("height", cellSize)
+        .attr("x", function(d) {
+          return week(d) * cellSize;
+        })
+        .attr("y", function(d) {
+          return day(d) * cellSize;
+        })
+        .datum(format);
 
     rect.append("title")
-            .text(function(d) {
-      return d;
-    });
+        .text(function(d) {
+          return d;
+        });
 
     svg.selectAll(".month")
-            .data(function(d) {
-      return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1));
-    })
-            .enter().append("path")
-            .attr("class", "month")
-            .attr("d", monthPath);
+        .data(function(d) {
+          return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1));
+        })
+      .enter().append("path")
+        .attr("class", "month")
+        .attr("d", monthPath);
 
 
     // [PA] Commenting out the csv call and using the data we have already
@@ -120,22 +120,20 @@ var D3CalendarViewComponent = D3ComponentBase.extend({
       dataIndexed[d[0]] = d[1];
     });
 
-    var formattingFunction = this.tooltipFormat||this._formattingFunction;
     var tooltipFormat = this.tooltipFormat || this._defaultTooltipFormat;
 
     rect.filter(function(d) {
-      return d in dataIndexed;
-    })
-            .attr("class", function(d) {
-      return "day " + color(dataIndexed[d]);
-    })
-            .select("title")
-            .text(function(d) {
-      return formattingFunction(d,dataIndexed[d]);
-          return tooltipFormat(d, dataIndexed[d]); 
-    });
+          return d in dataIndexed;
+        })
+        .attr("class", function(d) {
+          return "day " + color(dataIndexed[d]);
+        })
+      .select("title")
+        .text(function(d) {
+          return tooltipFormat(d, dataIndexed[d]);
+        });
     
-       //      });
+    // });
 
     function monthPath(t0) {
       var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
@@ -150,10 +148,6 @@ var D3CalendarViewComponent = D3ComponentBase.extend({
 
     // d3.select(self.frameElement).style("height", height + "px");
 
-
-
   }
   
 });
-
-
