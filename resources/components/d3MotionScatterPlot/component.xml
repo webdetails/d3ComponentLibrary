@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<DesignerComponent>
+  <Header>
+    <Name>d3 Motion Scatter Plot</Name>
+    <IName>d3MotionScatterPlot</IName>
+    <Description>d3 Motion Scatter Plot</Description>
+    <Category>D3COMPONENTS</Category>
+    <CatDescription>D3 Components</CatDescription>
+    <Type>PalleteEntry</Type>
+    <Version>1.0</Version>
+  </Header>
+  <Contents>
+    <Model>
+		<!-- Component specific options 
+		<Property>boxHeight</Property>-->
+		<!-- <Property>seriesInRow</Property> -->
+		<!-- Leave this ones for every component -->
+		<Definition name="chartDefinition">
+			<Property>dataSource</Property>
+		</Definition>
+		<Property name="parameters">xActionArrayParameter</Property>
+		<Property>executeAtStart</Property>
+		<Property>preChange</Property>
+		<Property>postChange</Property>
+		<Property>postFetch</Property>
+		<Property>htmlObject</Property>
+		<Property>preExecution</Property>
+		<Property>postExecution</Property>
+		<Property>tooltip</Property>
+		<Property name="tooltipFormat">cccTooltipFormat</Property>
+		<Property>listeners</Property>
+		<Property>refreshPeriod</Property>
+    </Model>
+    <Implementation>
+      <Code src="d3MotionScatterPlot.js"/>
+      <Styles>
+        <Style version="1.0" src="d3MotionScatterPlot.css">d3MotionScatterPlot</Style>
+      </Styles>
+      <Dependencies>
+        <Dependency src="../commons/lib/d3.js" version="343">d3js</Dependency>
+        <Dependency src="../commons/d3ComponentBase.js" version="1">d3ComponentBase</Dependency>
+        <Dependency src="MotionScatterPlot.js" version="1">MotionScatterPlot</Dependency>
+      </Dependencies>
+      <CustomProperties>
+		<!--
+		<DesignerProperty>
+			<Header>
+				<Name>seriesInRow</Name>
+				<Parent>BaseProperty</Parent>
+				<DefaultValue>"true"</DefaultValue>
+				<Description>SeriesInRow</Description>
+				<Tooltip></Tooltip>
+				<Advanced>false</Advanced>
+				<InputType>Boolean</InputType>
+				<OutputType>Boolean</OutputType>
+				<Order>40</Order>
+				<Version>1.0</Version>
+			</Header>
+		</DesignerProperty>
+		-->
+	  </CustomProperties>
+    </Implementation>
+  </Contents>
+</DesignerComponent>

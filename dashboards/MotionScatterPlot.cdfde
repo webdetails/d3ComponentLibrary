@@ -1,0 +1,663 @@
+{
+ "layout": {
+  "title": "variableInfo",
+  "rows": [
+   {
+    "id": "b289878b-b497-6f18-7208-4de3d2c35f84",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "projectCSS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "/pentaho/api/repos/d3ComponentLibrary/static/custom/css/d3ComponentLibrary.css",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "773718cc-497c-02c8-897b-35767e3e4760",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "rowTitle",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "mainHeader",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "26a52e92-91ae-93fd-621e-a263052a4bd4",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "773718cc-497c-02c8-897b-35767e3e4760",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<a class=\"d3GalleryBackButton\" href=\"main\"></a> D3 Component Gallery ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "dd267003-1a48-12bf-daff-e9afee47772b",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "vizName",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "h2",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d0b2c100-8a42-3dda-47e5-da9630bf5933",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "dd267003-1a48-12bf-daff-e9afee47772b",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "Motion Scatter Plot ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a780699f-f20f-735e-dbfd-6f22c386237f",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "vizDescription",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "230282fb-f5db-d9df-cc6c-e2a46d85a32d",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "a780699f-f20f-735e-dbfd-6f22c386237f",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<p>\n    This is the Motion Scatter Plot component.\n    It was adapted from the famous\n    <a href=\"http://bost.ocks.org/mike/nations/\">\n    The Wealth & Health of Nations</a> d3.js example.\n</p>\n\n<p>\n\n    Scatter plots are already good for supporting data investigation, \n    confirming hypothesis and on identifying linear patterns.\n    The \"Motion Scatter Plot\" brings even more power by enabling \n    a forth continuous dimension.\n    \n    \n</p> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d8a5039b-f88e-d1fd-2be0-540c608b95e2",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "exampleTitle",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "h2",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d4cf60a1-380d-dfca-e937-0ac1fda6493a",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "d8a5039b-f88e-d1fd-2be0-540c608b95e2",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "Example ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "2836fb2e-2058-f580-94b7-a988248af501",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "exampleObj",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "865559a2-22d3-8560-78f2-8dce53a91fe0",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "documentationTitle",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "h2",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "2ac68c6a-6373-a02c-3bf4-5f7dda674c8b",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "865559a2-22d3-8560-78f2-8dce53a91fe0",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "Documentation and Usage ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "6a081b1b-5828-1240-9930-f9c5b53c1ea0",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "documentation",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "8140ee19-4489-72eb-af85-fc1319eaf9f2",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "6a081b1b-5828-1240-9930-f9c5b53c1ea0",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<p>\n    This component is under development and \n    there is currently a number of customizations yet to be done.\n    However, the library itself has already a good background for making it\n    full flexible.\n</p> \n\n\n<h3>Author</h3>\n\n@marpontes\n\n\n<h3>Result Set</h3>\n\n<div class=\"well\"><p>\n\nSo far, the resultset parser isn't implemented. It means that the chart can \nonly consume a json thrown from a kettle datasource.\n\nWhen implemented, the expected table will look like this\n<table class=\"resultsetTable\">\n\n    <tr>\n        <th>Column</th>\n        <th>Description</th>\n        <th>Name required?</th>\n    </tr>\n\n    <tr>\n        <td>name</td>\n        <td>The String name that identifies the dot</td>\n        <td>Yes</td>\n    </tr>\n    <tr>\n        <td>group</td>\n        <td>The String name that identifies the group of colors</td>\n        <td>Yes</td>\n    </tr>\n    <tr>\n        <td>time</td>\n        <td>The Integer value of the year or another continuous measure</td>\n        <td>Yes</td>\n    </tr>\n    <tr>\n        <td>xMeasure</td>\n        <td>The Numeric value that corresponds to the value on the x axis</td>\n        <td>Yes</td>\n    </tr>\n    <tr>\n        <td>yMeasure</td>\n        <td>The Numeric value that corresponds to the value on the x axis</td>\n        <td>Yes</td>\n    </tr>\n    <tr>\n        <td>diameterMeasure</td>\n        <td>The Numeric value that corresponds to the circle diameter</td>\n        <td>Yes</td>\n    </tr>\n\n\n</table>\n\n\n</p></div>\n\n\n\n<h3>Options</h3>\n \n<div class=\"well\"><p>\n    \n    [NYI]\n    \n    <dl>\n        <dt>Start animation automatically</dt>\n        <dd>Whether the animation will start or not, as soon as the chath\n        is rendered\n        </dd>  \n    </dl>   \n    <dl>\n        <dt>Chart Title</dt>\n        <dd>The title to be shown\n        </dd>  \n    </dl>\n    <dl>\n        <dt>Y Axis title</dt>\n        <dd>The Y axis title\n        </dd>  \n    </dl>\n    <dl>\n        <dt>Animation Duration</dt>\n        <dd>The length in milliseconds that the transition will take\n        </dd>  \n    </dl>\n    <dl>\n        <dt>Color Scale</dt>\n        <dd>The color scale to render the circles fillings\n        </dd>  \n    </dl>\n    \n</p></div>\n \n\n<h3>Visualization Information</h3>\n\n<div class=\"well\"><p>\n\nI have wrapped this visualization into a Javascript object and it is now being\nintegrated into the ChartComponent structure.\n\n\n</p></div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "98331e9b-0428-b197-4f93-bef320c568c2",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "value": "100",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ]
+ },
+ "components": {
+  "rows": [
+   {
+    "id": "D3COMPONENTS",
+    "name": "D3 Components",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "D3 Components",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "5537c610-93d2-77cb-da22-3648c61a54fc",
+    "type": "Componentsd3MotionScatterPlot",
+    "typeDesc": "d3 Motion Scatter Plot",
+    "parent": "D3COMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "MotionScatter",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "dataSource",
+      "value": "motionScatterPlotDS",
+      "type": "Datasource"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:exampleObj}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "\"function(c){console.log(c)}\"",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "tooltipFormat",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ]
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "D3COMPONENTLIBRARY_CPKENDPOINTS",
+    "name": "D3COMPONENTLIBRARY Endpoints",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "D3COMPONENTLIBRARY Endpoints",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "2817afe8-0a15-d601-6030-fddb07cccf14",
+    "type": "Componentsd3ComponentLibrary_motionScatterPlotDS_CPKENDPOINT",
+    "typeDesc": "motionScatterPlotDS Endpoint",
+    "parent": "D3COMPONENTLIBRARY_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "motionScatterPlotDS",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "d3ComponentLibrary",
+    "meta_endpoint": "motionScatterPlotDS"
+   }
+  ]
+ },
+ "filename": "/system/d3ComponentLibrary/dashboards/MotionScatterPlot.cdfde"
+}
