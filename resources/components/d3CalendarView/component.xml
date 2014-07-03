@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <DesignerComponent>
   <Header>
-    <Name>d3 Component</Name>
-    <IName>d3</IName>
-    <Description>D3 Component Component</Description>
+    <Name>d3 CalendarView</Name>
+    <IName>d3CalendarView</IName>
+    <Description>d3 Calendar View Component</Description>
     <Category>D3COMPONENTS</Category>
     <CatDescription>D3 Components</CatDescription>
     <Type>PalleteEntry</Type>
@@ -13,7 +13,6 @@
     <Model>
       <!-- Component specific options -->
       <Property>width</Property>
-      <Property>height</Property>
       <!-- Leave this ones for every component -->
       <Definition name="chartDefinition">
           <Property>dataSource</Property>
@@ -23,37 +22,24 @@
       <Property>preChange</Property>
       <Property>postChange</Property>
       <Property>postFetch</Property>
-      <Property>customfunction</Property>
       <Property>htmlObject</Property>
       <Property>preExecution</Property>
       <Property>postExecution</Property>
       <Property>tooltip</Property>
+      <Property name="tooltipFormat">cccTooltipFormat</Property>
       <Property>listeners</Property>
       <Property>refreshPeriod</Property>
     </Model>
     <Implementation>
-      <Code src="d3Component.js"/>
-      <!--Styles>
-        <Style version="1.0" src="d3Component.css">d3Component</Style>
-      </Styles-->
+      <Code src="d3CalendarView.js"/>
+      <Styles>
+        <Style version="1.0" src="d3CalendarView.css">d3CalendarView</Style>
+      </Styles>
       <Dependencies>
         <Dependency src="../commons/lib/d3.js" version="343">d3js</Dependency>
         <Dependency src="../commons/d3ComponentBase.js" version="1">d3ComponentBase</Dependency>
       </Dependencies>
       <CustomProperties>
-		<!-- <DesignerProperty>
-		  <Header>
-		    <Name>inputFormat</Name>
-		    <Parent>BaseProperty</Parent>
-		    <DefaultValue>YYYY-MM-DD</DefaultValue>
-		    <Description>Input format</Description>
-		    <Tooltip>Input date format as used by moment.js</Tooltip>
-		    <InputType>String</InputType>
-		    <OutputType>String</OutputType>
-		    <Order>30</Order>
-		    <Version>1.0</Version>
-		  </Header>
-		</DesignerProperty> -->
 	  </CustomProperties>
     </Implementation>
   </Contents>

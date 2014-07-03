@@ -1,89 +1,88 @@
-<project name="" basedir="." default="dist"
+<project name="D3 Component Library" basedir="." default="dist"
          xmlns:ivy="antlib:org.apache.ivy.ant">
+
   <description>
-    This build file is used to create the D3ComponentLibrary project
-    and works with the common_build.xml file.
+    This build file is used to create the D3 Component Library project.
   </description>
-  <!-- Import the common_build.xml file which contains all the default tasks -->
+  
   <import file="build-res/subfloor-pkg.xml" id="subfloor"/>
-  <property name="plugin.name"
-            value="d3ComponentLibrary"
-            description="Name of the plugin"/>
-  <property name="stage.dir"
-            value="${bin.dir}/stage"
-            description="Name of the resource directory"/>
-  <tstamp/>
-  <!-- Build the project.revision property -->
-  <property name="distribution.version" value="${project.stage}-${project.version}"/>
-  <echo>distribution.version = ${distribution.version}</echo>
-  <property name="plugin.artifact.id" value="${plugin.name}"/>
-  <property name="plugin.zipfile" value="${plugin.artifact.id}-${distribution.version}.zip"/>
+
+  <echo>project = ${project.id}</echo>
+  <echo>stage = ${project.stage}</echo>
+  <echo>version = ${project.version}</echo>
+  <echo>revision = ${project.revision}</echo>
+    
   <!--=======================================================================
-              dist
-              Creates a distribution of this project's plugin zip
-              ====================================================================-->
-  <target name="dist" depends="clean,resolve" description="Creates a distribution">
-    <!-- delete and re-create the plugin dist folder tree -->
+      dist (override)
+
+      Creates the distribution
+      ====================================================================-->
+  <target name="dist" depends="clean-all, resolve, dist-plugin"/>
+
+  <!--=======================================================================
+      dist-plugin
+
+      Creates the plugin distribution zip package (which includes version.xml file)
+      and a marketplace.xml file
+      ====================================================================-->
+  <target name="dist-plugin" depends="" description="Creates a distribution">
+    <!-- create stage/dist folder tree -->
+    <!--<property name="stage.dir" value="${bin.dir}/stage"/>-->
     <mkdir dir="${stage.dir}"/>
-    <mkdir dir="${stage.dir}/${plugin.name}"/>
-    <mkdir dir="${stage.dir}/${plugin.name}"/>
+    <mkdir dir="${stage.dir}/${project.id}"/>
     <mkdir dir="${dist.dir}"/>
-    <!-- copy the entire plugin to that folder  -->
-    <copy todir="${stage.dir}/${plugin.name}/" overwrite="true">
-      <fileset dir=".">
-        <include name="**/*"/>
-		  <exclude name="bin/"/>
+    <!-- copy dist files to stage -->
+    <copy todir="${stage.dir}/${project.id}" overwrite="true">
+      <fileset dir="${basedir}">
+        <exclude name="dist/"/>
+        <exclude name="bin/"/>
+        <exclude name="dev-lib/"/>
+        <exclude name=".git/"/>
+        <exclude name=".gitignore"/>
+        <exclude name="market_entry.xml"/>
+        <exclude name="**/.DS_Store"/>
+        <exclude name="**/Thumbs.db"/>
       </fileset>
     </copy>
-    <!-- create the version file -->
-	<tstamp/>			
-	<property name="sequential.build.id" value="manual-${DSTAMP}"/>
-	<echo file="${stage.dir}/${plugin.name}/version.xml" message="&lt;version branch='TRUNK' buildId='${sequential.build.id}'>${distribution.version}&lt;/version>"/>		       
-    <!-- create a zip file -->
-    <zip zipfile="${dist.dir}/${plugin.zipfile}"
+    <!-- create sequential build id -->
+    <tstamp/>
+    <property name="sequential.build.id" value="manual-${DSTAMP}"/>
+    <!-- create version.xml file -->
+    <echoxml file="${stage.dir}/${project.id}/version.xml">
+      <version branch='${project.stage}' buildId='${sequential.build.id}'>${project.revision}</version>
+    </echoxml>
+    <!-- create zip file -->
+    <zip zipfile="${dist.dir}/${project.id}-${project.revision}.zip"
          basedir="${stage.dir}"
-         includes="${plugin.name}/**/*"
-         excludes="**/Thumbs.db"/>
-
-	<echo file="${dist.dir}/marketplace.xml">&lt;version>
-	    &lt;branch>TRUNK&lt;/branch>
-		&lt;version>${distribution.version}&lt;/version>
-		&lt;name>Trunk&lt;/name>
-		&lt;package_url>not defined&lt;/package_url>
-		&lt;description>@PLUGIN_PACKAGE_DESCRIPTION&lt;/description>
-		&lt;build_id>${sequential.build.id}&lt;/build_id>
-		&lt;/version>	</echo>         
-    <move tofile="${dist.dir}/${ivy.artifact.id}-${project.revision}.zip" file="${dist.dir}/${plugin.zipfile}"/>
-
-
+         includes="${project.id}/**/*"/>
+    <!-- create marketplace.xml file -->
+    <echoxml file="${dist.dir}/marketplace.xml">
+      <version>
+        <branch>${project.stage}</branch>
+        <version>${project.revision}</version>
+        <name>${project.stage}</name>
+        <package_url></package_url>
+        <description></description>
+        <build_id>${sequential.build.id}</build_id>
+      </version>
+    </echoxml>
   </target>
+
   <!--=======================================================================
-              install-plugin
-              Installs the plugin locally
-              ====================================================================-->
-  <target name="install-plugin" depends="clean, resolve, dist" description="Installs the plugin locally">
-    <fail message="plugin.local.install.solutions.dir not set - cannot copy"
-          unless="plugin.local.install.solutions.dir"/>
-    <delete dir="${plugin.local.install.solutions.dir}/system/${plugin.name}"/>
-    <copy todir="${plugin.local.install.solutions.dir}/system/${plugin.name}">
-      <fileset dir="${stage.dir}/${plugin.name}">
+      install-plugin
+
+      Installs the plugin in a local BA server installation (use an 'override.properties' 
+      file to define 'baserver.system.dir' = full path to system dir on local BA server)
+      ====================================================================-->
+  <target name="install-plugin" depends="clean, dist-plugin" description="Installs the plugin locally">
+    <fail message="baserver.system.dir not set - cannot install plugin"
+          unless="baserver.system.dir"/>
+    <delete dir="${baserver.system.dir}/${project.id}"/>
+    <copy todir="${baserver.system.dir}/${project.id}">
+      <fileset dir="${stage.dir}/${project.id}">
         <include name="**/*"/>
       </fileset>
     </copy>
-    <get src="http://127.0.0.1:8080/pentaho/Publish?publish=now&amp;class=org.pentaho.platform.plugin.services.pluginmgr.PluginAdapter&amp;userid=${plugin.local.install.user}&amp;password=${plugin.local.install.pass}"
-         dest="${stage.dir}/blah.html"/>
   </target>
-  <!-- Overriding resolve target so we can add resolve-dev -->
-  <target name="resolve"
-          depends="resolve-default, resolve-test, resolve-codegen, resolve-runtime, ivy.check-releasable"
-          description="Retrieves all the dependent libraries" />
-  <target name="resolve-runtime" depends="resolve-init">
-    <ivy:resolve file="${ivyfile}" conf="runtime" />
-    <ivy:retrieve conf="runtime" pattern="${runtimelib.dir}/[module]-[revision](-[classifier]).[ext]" />
-  </target>
-  <target name="clean-jars">
-    <delete dir="${lib.dir}" />
-    <delete dir="${testlib.dir}" />
-    <delete dir="${runtimelib.dir}" />
-  </target>
+
 </project>

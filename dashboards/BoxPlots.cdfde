@@ -147,7 +147,7 @@
      },
      {
       "name": "html",
-      "value": "Calendar View ",
+      "value": "Box Plots ",
       "type": "Html"
      },
      {
@@ -218,7 +218,7 @@
      },
      {
       "name": "html",
-      "value": "<p>\n    Calendar view taken from \n    <a href=\"http://bl.ocks.org/mbostock/4063318\">this example</a>\n</p>\n\n<p>\n\n    A calendar visualization where the values are visualized as colored cells per day.\n    Days are arranged into columns by week, then grouped by month and years. \n    Colors by Cynthia Brewer. Layout inspired by Rick Wicklin and Robert Allison.\n    \n</p> ",
+      "value": "<p>\n    Box Plots taken from \n    <a href=\"http://bl.ocks.org/mbostock/4061502\">this example</a>\n</p>\n\n<p>\n\n    A box-and-whisker plot uses simple glyphs that summarize a \n    quantitative distribution with five standard statistics: \n    the smallest value, lower quartile, median, upper quartile, \n    and largest value. This summary approach allows the viewer \n    to easily recognize differences between distributions.\n    \n</p> ",
       "type": "Html"
      },
      {
@@ -469,7 +469,7 @@
      },
      {
       "name": "html",
-      "value": "<p>\n    Calendar view that displays an yearly grid\n</p> \n\n\n<h3>Author</h3>\n\nPedro Alves - Webdetails\n\n\n<h3>Result Set</h3>\n\n<div class=\"well\"><p>\n\nThis visualization requires a resultset with 2 columns, one for the date in \n'yyyy-mm-dd' format and other for the numeric value\n\n<table class=\"resultsetTable\">\n    <tr><th>Column</th><th>Description</th><th>Name required?</th></tr>\n    \n    <tr><td>date</td><td>Date string in 'yyyy-mm-dd' format</td><td>No</td></tr>    \n    <tr><td>value</td><td>The numerical value</td><td>No</td></tr>    \n    \n</table>\n\n\n</p></div>\n\n\n\n<h3>Options</h3>\n \n<div class=\"well\"><p>\n    \n    Here are the specific options to add to the generic CDF options:\n    \n    <dl>\n        <dt>width</dt>\n        <dd>If given, will be used. If not, visualization will adapt to the \n            available container\n        </dd>  \n        <dt>tooltipFormat</dt>\n        <dd>Optional function to control the tooltip format. Receives \n            two arguments: <i>date</i> and <i>value</i>\n        </dd>  \n    </dl>\n    \n</p></div>\n \n\n<h3>Visualization Information</h3>\n\n<div class=\"well\"><p>\n\n\nCode was taken from \n<a href=\"http://bl.ocks.org/mbostock/raw/3885705/\">original example</a>. All\ncredits to the original author. Some modifications were made to this code:\n\n<ul>\n    <li>Replaced the datasource call to get the data from the endpoints</li>\n    <li>Width is passed from the component options</li>\n    <li>Height is calculated from width</li>\n    <li>Tooltip can optionally be formatted</li>\n</ul>\n\nThe array of colors is fixed, but can be overriden by simple CSS. The default\nis:\n\n<blockquote>\n    <pre>\n\nsvg .day {\n  fill: #fff;\n  stroke: #ccc;\n}\n\nsvg .month {\n  fill: none;\n  stroke: #000;\n  stroke-width: 2px;\n}\n\n.RdYlGn .q0-11{fill:rgb(165,0,38)}\n.RdYlGn .q1-11{fill:rgb(215,48,39)}\n.RdYlGn .q2-11{fill:rgb(244,109,67)}\n.RdYlGn .q3-11{fill:rgb(253,174,97)}\n.RdYlGn .q4-11{fill:rgb(254,224,139)}\n.RdYlGn .q5-11{fill:rgb(255,255,191)}\n.RdYlGn .q6-11{fill:rgb(217,239,139)}\n.RdYlGn .q7-11{fill:rgb(166,217,106)}\n.RdYlGn .q8-11{fill:rgb(102,189,99)}\n.RdYlGn .q9-11{fill:rgb(26,152,80)}\n.RdYlGn .q10-11{fill:rgb(0,104,55)} \n    \n</pre>\n</blockquote> \n\n</p></div> ",
+      "value": "<p>\n    Box Plots is a convenient way of graphically depicting groups of numerical data through their quartiles\n</p> \n\n\n<h3>Author</h3>\n\nKleyson Rios\n\n\n<h3>Result Set</h3>\n\n<div class=\"well\"><p>\n\nThis visualization requires a matrix (NxN) as resultset, where each row is a set of values that \nrepresents the data serie for each box plot\n\n<table class=\"resultsetTable\">\n\n    <tr><th>Column</th><th>Description</th><th>Name required?</th></tr>\n    \n    <tr><td>metric 1</td><td>The numerical value</td><td>No</td></tr>    \n    <tr><td>metric 2</td><td>The numerical value</td><td>No</td></tr>    \n    <tr><td>metric N</td><td>The numerical value</td><td>No</td></tr>    \n    \n</table>\n\n\n</p></div>\n\n\n\n<h3>Options</h3>\n \n<div class=\"well\"><p>\n    \n    Here are the specific options to add to the generic CDF options:\n    \n    <dl>\n        <dt>Box Height</dt>\n        <dd>Height for each box plot\n        </dd>  \n    </dl>\n    \n</p></div>\n \n\n<h3>Visualization Information</h3>\n\n<div class=\"well\"><p>\n\n\nCode was taken from \n<a href=\"http://bl.ocks.org/mbostock/4061502\">original example</a>. All\ncredits to the original author. Some modifications were made to this code,\nbut all modifications to the code were simply to plug in the data and options.\n\n<ul>\n    <li>Replaced the datasource call to get the data from the endpoints</li>\n    <li>Box Height is passed from the component options</li>\n</ul>\n\nThe array of colors is fixed, but can be overriden by simple CSS. The default is:<p>\n\n<blockquote>\n    <pre>\n\nsvg.box {\n  font: 10px sans-serif;\n}\n\nsvg.box line,\nsvg.box rect,\nsvg.box circle {\n  fill: #fff;\n  stroke: #000;\n  stroke-width: 1.5px;\n}\n\nsvg.box .center {\n  stroke-dasharray: 3,3;\n}\n\nsvg.box .outlier {\n  fill: none;\n  stroke: #ccc;\n}\n\n    </pre>\n</blockquote> \n\n</p></div> ",
       "type": "Html"
      },
      {
@@ -531,14 +531,14 @@
     ]
    },
    {
-    "id": "24c772c1-f923-996d-6287-fa20350b8dfe",
-    "type": "Componentsd3CalendarView",
-    "typeDesc": "d3 Calendar View Component",
+    "id": "102208d4-7478-d027-776f-bdc54926f9ba",
+    "type": "Componentsd3BoxPlots",
+    "typeDesc": "d3 Box Plots",
     "parent": "D3COMPONENTS",
     "properties": [
      {
       "name": "name",
-      "value": "calendarView",
+      "value": "boxplots",
       "type": "Id"
      },
      {
@@ -552,8 +552,13 @@
       "type": "ValuesArray"
      },
      {
+      "name": "boxHeight",
+      "value": "500",
+      "type": "Integer"
+     },
+     {
       "name": "dataSource",
-      "value": "djiCsv",
+      "value": "boxplotsDS",
       "type": "Datasource"
      },
      {
@@ -613,7 +618,7 @@
      },
      {
       "name": "tooltipFormat",
-      "value": "function f(d,v) {\n  return \"Date: \" + d + \"; Value: \" + (100 * v).toFixed(1) + \"%\";\n}",
+      "value": "",
       "type": "JavaScript"
      }
     ]
@@ -637,32 +642,32 @@
     ]
    },
    {
-    "id": "986b8b55-c320-05ad-569a-15286188c085",
-    "type": "Componentsd3ComponentLibrary_djiCsv_CPKENDPOINT",
-    "typeDesc": "djiCsv Endpoint",
+    "id": "ff18e9f5-4f33-4a16-bdd6-996c4ffecb44",
+    "type": "Componentsd3ComponentLibrary_boxplotsds_CPKENDPOINT",
+    "typeDesc": "boxplotsds Endpoint",
     "parent": "D3COMPONENTLIBRARY_CPKENDPOINTS",
     "properties": [
      {
       "name": "name",
-      "value": "djiCsv",
+      "value": "boxplotsDS",
       "type": "Id"
      },
      {
       "name": "stepName",
-      "value": "OUTPUT_2cols",
+      "value": "OUTPUT",
       "type": "String"
      },
      {
       "name": "kettleOutput",
-      "value": "Json",
+      "value": "Inferred",
       "type": "kettleOutputCustom"
      }
     ],
     "meta": "CPK",
     "meta_pluginId": "d3ComponentLibrary",
-    "meta_endpoint": "djiCsv"
+    "meta_endpoint": "boxplotsds"
    }
   ]
  },
- "filename": "/system/d3ComponentLibrary/dashboards/CalendarView.cdfde"
+ "filename": "/system/d3ComponentLibrary/dashboards/BoxPlots.cdfde"
 }

@@ -1,0 +1,95 @@
+svg.d3ScatterplotMatrix {
+  font-size: 14px;
+}
+
+svg.d3ScatterplotMatrix .axis {
+  shape-rendering: crispEdges;
+}
+
+svg.d3ScatterplotMatrix .axis line {
+  stroke: #ddd;
+  stroke-width: .5px;
+}
+
+svg.d3ScatterplotMatrix .axis path {
+  display: none;
+}
+
+svg.d3ScatterplotMatrix rect.extent {
+  fill: #000;
+  fill-opacity: .125;
+  stroke: #fff;
+}
+
+svg.d3ScatterplotMatrix rect.frame {
+  fill: #fff;
+  fill-opacity: .7;
+  stroke: #aaa;
+}
+
+svg.d3ScatterplotMatrix circle {
+  fill: #ccc;
+  fill-opacity: .5;
+}
+
+svg.d3ScatterplotMatrix .legend circle {
+  fill-opacity: 1;
+}
+
+svg.d3ScatterplotMatrix .legend text {
+  font-size: 18px;
+  font-style: oblique;
+}
+
+svg.d3ScatterplotMatrix .cell text {
+  pointer-events: none;
+}
+
+svg.d3ScatterplotMatrix .col0 {
+  fill: #800;
+}
+
+svg.d3ScatterplotMatrix .col1 {
+  fill: #080;
+}
+
+svg.d3ScatterplotMatrix .col2 {
+  fill: #008;
+}
+
+svg.d3ScatterplotMatrix .col3 {
+  fill: #880;
+}
+
+svg.d3ScatterplotMatrix .col4 {
+  fill: #088;
+}
+
+svg.d3ScatterplotMatrix .col5 {
+  fill: #808;
+}
+
+svg.d3ScatterplotMatrix .col6 {
+  fill: #600;
+}
+
+svg.d3ScatterplotMatrix .col7 {
+  fill: #060;
+}
+
+svg.d3ScatterplotMatrix .col8 {
+  fill: #006;
+}
+
+svg.d3ScatterplotMatrix .col9 {
+  fill: #400;
+}
+
+svg.d3ScatterplotMatrix .col10 {
+  fill: #040;
+}
+
+svg.d3ScatterplotMatrix .col11 {
+  fill: #004;
+}
+

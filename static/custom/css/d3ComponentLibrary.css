@@ -672,8 +672,40 @@ button {
 
 }
 
+.d3GalleryBackButton:hover{
+  cursor: pointer;
+}
+  
+.d3GalleryBackButton:before{
+  content: '<';
+}
+
 .mainHeader.clearfix:after{
 	visibility: visible;
 }
 
+
+.visualizationsTable tr:hover td{
+  cursor:pointer;
+  color: #0098C4;
+}
+
+.visualizationsTable tr:active td{
+  cursor:pointer;
+  background-color: #0098C4;
+  color: white;
+}
+
+.dataTables_info, .dataTables_paginate {
+  margin-top: 20px;
+}
+
+
+#documentation dt {
+  margin-top: 10px;
+}
+
+#documentation dd {
+  padding-left: 10px;
+}
 

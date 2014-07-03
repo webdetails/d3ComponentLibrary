@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>motionScatterPlotDS</name>
+    <description>Clean Transformation</description>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+        <parameter>
+            <name>&#x23;cpk.cache.isEnabled</name>
+            <default_value>false</default_value>
+            <description>Enables&#x2f;disables caching of the results. Remove &#x27;&#x23;&#x27; to use variable.&#xa;</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.cache.timeToLiveSeconds</name>
+            <default_value>3600</default_value>
+            <description>For how many seconds a result will be cached. Setting this value to 0 means the result will be cached &#x22;forever&#x22;. Remove &#x27;&#x23;&#x27; to use variable.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.executeAtStart</name>
+            <default_value/>
+            <description>Whether the transformation is to be executed when the plugin is initialized. Remove &#x27;&#x23;&#x27; to use variable.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.plugin.dir</name>
+            <default_value>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;..&#x2f;..</default_value>
+            <description>The plugin folder. This value is automatically set at runtime if &#x27;&#x23;&#x27; is removed from variable name.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.plugin.id</name>
+            <default_value/>
+            <description>The id of the plugin. This value is automatically set at runtime if  &#x27;&#x23;&#x27; is removed from variable name.&#xa;</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.response.attachmentName</name>
+            <default_value/>
+            <description>The attachment name used when downloading a file from a result.  Remove &#x27;&#x23;&#x27; to use variable.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.response.download</name>
+            <default_value>false</default_value>
+            <description>Whether to &#x28;or not&#x29; mark the http reponse body as an attachment. Remove &#x27;&#x23;&#x27; to use variable.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.response.kettleOutput</name>
+            <default_value>Infered</default_value>
+            <description>The output format to be used by default. Possible values&#x3a; Infered, Json, SingleCell, ResultFiles, ResultOnly. Remove &#x27;&#x23;&#x27; to use variable.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.response.mimeType</name>
+            <default_value/>
+            <description>The mimeType of the http response. If this value is not set, the plugin will try to determine it from the file extension. Remove &#x27;&#x23;&#x27; to use variable.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.result.stepName</name>
+            <default_value>OUTPUT</default_value>
+            <description>The default output step where the rows will be fetched for the result. Remove &#x27;&#x23;&#x27; to use variable.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.session.&#x5b;sessionVarName&#x5d;</name>
+            <default_value/>
+            <description>The value of session variable named &#x5b;sessionVarName&#x5d;. This value is automatically injected here at runtime if &#x27;&#x23;&#x27; is removed from variable name.&#xa;</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.session.roles</name>
+            <default_value/>
+            <description>The roles of the username executing this transformation. This value is automatically set at runtime if &#x27;&#x23;&#x27; is removed from variable name.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.session.username</name>
+            <default_value/>
+            <description>The username that is executing this transformation. This value is automatically set at runtime if &#x27;&#x23;&#x27; is removed from variable name.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.solution.system.dir</name>
+            <default_value>&#x24;&#x7b;cpk.plugin.dir&#x7d;&#x2f;..</default_value>
+            <description>The pentaho-solutions folder. This value is automatically set at runtime if &#x27;&#x23;&#x27; is removed from variable name.</description>
+        </parameter>
+        <parameter>
+            <name>&#x23;cpk.webapp.dir</name>
+            <default_value>&#x24;&#x7b;cpk.solution.system.dir&#x7d;&#x2f;..&#x2f;..&#x2f;tomcat&#x2f;webapps&#x2f;pentaho</default_value>
+            <description>The webapp folder. This value is automatically set at runtime if &#x27;&#x23;&#x27; is removed from variable name.</description>
+        </parameter>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2013&#x2f;07&#x2f;04 18&#x3a;48&#x3a;57.073</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2013&#x2f;07&#x2f;04 18&#x3a;48&#x3a;57.073</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>This transformation generates a lot of random information in&#xa;the original fashion, that looks pretty much like this&#x3a;&#xa;&#x5b;&#xa;	&#x7b;&#xa;		&#x22;name&#x22; &#x3a; &#x22;...&#x22;,&#xa;		&#x22;region&#x22; &#x3a; &#x22;...&#x22; ,&#xa;		income &#x3a; &#x5b;&#x5b;9,9&#x5d;,&#x5b;9,9&#x5d;,...&#x5d;,&#xa;		lifeExpectancy &#x3a; &#x5b;&#x5b;9,9&#x5d;,&#x5b;9,9&#x5d;,...&#x5d;,&#xa;		population&#x3a; &#x5b;&#x5b;9,9&#x5d;,&#x5b;9,9&#x5d;,...&#x5d;&#xa;	&#x7d;&#xa;&#x5d;&#xa;&#xa;TO-DO&#x3a;&#xa;So far, this ETL is throwing a JSON, because the parser hasn&#x27;t yet&#xa;been developed in the component.</note>
+      <xloc>52</xloc>
+      <yloc>175</yloc>
+      <width>406</width>
+      <heigth>190</heigth>
+      <fontname>Courier</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+ 
+  <order>
+  <hop> <from>One row for each year that i want to show</from><to>Now the actual values for each Year</to><enabled>Y</enabled> </hop>
+  <hop> <from>Now the actual values for each Year</from><to>Let it multiply&#x21;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Brazilian states</from><to>Let it multiply&#x21;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Let it multiply&#x21;</from><to>Now let&#x27;s sort this out</to><enabled>Y</enabled> </hop>
+  <hop> <from>Now let&#x27;s sort this out</from><to>rand</to><enabled>Y</enabled> </hop>
+  <hop> <from>rand</from><to>Making up some values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Making up some values</from><to>PROJECT</to><enabled>Y</enabled> </hop>
+  <hop> <from>PROJECT</from><to>Add value fields changing sequence</to><enabled>Y</enabled> </hop>
+  <hop> <from>Now the actual values for each Year</from><to>maxYear</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add value fields changing sequence</from><to>Get maxYear</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get maxYear</from><to>Array IT</to><enabled>Y</enabled> </hop>
+  <hop> <from>maxYear</from><to>Get maxYear</to><enabled>Y</enabled> </hop>
+  <hop> <from>Array IT</from><to>only last row from each state</to><enabled>Y</enabled> </hop>
+  <hop> <from>only last row from each state</from><to>Thank you guys, Nature.selection&#x28;&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>only last row from each state</from><to>JSON IT</to><enabled>Y</enabled> </hop>
+  <hop> <from>JSON IT</from><to>weld</to><enabled>Y</enabled> </hop>
+  <hop> <from>weld</from><to>OUTPUT</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Brazilian states</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>name</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>region</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>startPopulation</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>startIncome</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>startLifeExpectancy</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <data>
+      <line> <item>PR</item><item>Sul</item><item>10997462</item><item>100</item><item>45</item> </line>
+      <line> <item>RS</item><item>Sul</item><item>3373960</item><item>110</item><item>46</item> </line>
+      <line> <item>SC</item><item>Sul</item><item>6634250</item><item>120</item><item>44</item> </line>
+      <line> <item>ES</item><item>Sudeste</item><item>3838363</item><item>100</item><item>35</item> </line>
+      <line> <item>MG</item><item>Sudeste</item><item>20593366</item><item>130</item><item>34</item> </line>
+      <line> <item>RJ</item><item>Sudeste</item><item>16369178</item><item>200</item><item>40</item> </line>
+      <line> <item>SP</item><item>Sudeste</item><item>44663672</item><item>230</item><item>39</item> </line>
+      <line> <item>AC</item><item>Norte</item><item>776463</item><item>10</item><item>35</item> </line>
+      <line> <item>AM</item><item>Norte</item><item>3807923</item><item>30</item><item>30</item> </line>
+      <line> <item>AP</item><item>Norte</item><item>734995</item><item>11</item><item>31</item> </line>
+      <line> <item>PA</item><item>Norte</item><item>7969655</item><item>90</item><item>33</item> </line>
+      <line> <item>RO</item><item>Norte</item><item>1728214</item><item>30</item><item>32</item> </line>
+      <line> <item>RR</item><item>Norte</item><item>488072</item><item>40</item><item>29</item> </line>
+      <line> <item>TO</item><item>Norte</item><item>1478163</item><item>9</item><item>31</item> </line>
+      <line> <item>AL</item><item>Nordeste</item><item>3300938</item><item>98</item><item>25</item> </line>
+      <line> <item>BA</item><item>Nordeste</item><item>15044127</item><item>170</item><item>31</item> </line>
+      <line> <item>CE</item><item>Nordeste</item><item>8778575</item><item>60</item><item>29</item> </line>
+      <line> <item>MA</item><item>Nordeste</item><item>6794298</item><item>54</item><item>32</item> </line>
+      <line> <item>PB</item><item>Nordeste</item><item>3914418</item><item>2</item><item>24</item> </line>
+      <line> <item>PE</item><item>Nordeste</item><item>9208511</item><item>170</item><item>33</item> </line>
+      <line> <item>PI</item><item>Nordeste</item><item>3184165</item><item>89</item><item>31</item> </line>
+      <line> <item>RN</item><item>Nordeste</item><item>11164050</item><item>83</item><item>23</item> </line>
+      <line> <item>SE</item><item>Nordeste</item><item>2195662</item><item>59</item><item>32</item> </line>
+      <line> <item>DF</item><item>Centro-Oeste</item><item>2789761</item><item>300</item><item>45</item> </line>
+      <line> <item>GO</item><item>Centro-Oeste</item><item>6434052</item><item>131</item><item>23</item> </line>
+      <line> <item>MS</item><item>Centro-Oeste</item><item>2587267</item><item>97</item><item>24</item> </line>
+      <line> <item>MT</item><item>Centro-Oeste</item><item>3182114</item><item>30</item><item>25</item> </line>
+    </data>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>87</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>One row for each year that i want to show</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+    </fields>
+    <limit>100</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>87</xloc>
+      <yloc>14</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Now the actual values for each Year</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <valuename>year</valuename>
+      <use_database>N</use_database>
+      <connection/>
+      <schema/>
+      <seqname>SEQ_</seqname>
+      <use_counter>Y</use_counter>
+      <counter_name/>
+      <start_at>1900</start_at>
+      <increment_by>1</increment_by>
+      <max_value>999999999</max_value>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>300</xloc>
+      <yloc>14</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Let it multiply&#x21;</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <cache_size>500</cache_size>
+      <main>Now the actual values for each Year</main>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue/>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>300</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Now let&#x27;s sort this out</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>region</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>name</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>year</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>500</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>rand</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>incomeRand</name>
+        <type>random integer</type>
+      </field>
+      <field>
+        <name>populationRand</name>
+        <type>random integer</type>
+      </field>
+      <field>
+        <name>lifeExpRand</name>
+        <type>random integer</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>500</xloc>
+      <yloc>329</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Making up some values</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>if&#x28;&#x21;income &#x7c;&#x7c; year&#x3d;&#x3d;1900&#x29;&#x7b;&#xa;	var income &#x3d; startIncome&#x2a;2&#x3b;&#xa;&#x7d;else&#x7b;&#xa;	var newInc &#x3d; &#x28;incomeRand &#x25; 100&#x29; &#x3c; -10 &#x3f; 0 &#x3a; &#x28;incomeRand &#x25; 100&#x29; &#x3b;&#xa;	income &#x2b;&#x3d; newInc&#x3b;&#xa;&#x7d;&#xa;&#xa;if&#x28;&#x21;population &#x7c;&#x7c; year&#x3d;&#x3d;1900&#x29;&#x7b;&#xa;	var population &#x3d; startPopulation&#x2a;5&#x3b;&#xa;&#x7d;else&#x7b;&#xa;	var newPop &#x3d; Math.abs&#x28;populationRand &#x25; 100000&#x29;&#x3b;&#xa;	population &#x2b;&#x3d; newPop&#x3b;&#xa;&#x7d;&#xa;&#xa;if&#x28;&#x21;lifeExp &#x7c;&#x7c; year&#x3d;&#x3d;1900&#x29;&#x7b;&#xa;	var lifeExp &#x3d; startLifeExpectancy&#x2b;10&#x3b;&#xa;&#x7d;else&#x7b;&#xa;	var newLE &#x3d; &#x28;&#x28;lifeExpRand &#x25; 3&#x29; &#x2b; lifeExp &#x3c; 0&#x29; &#x3f; &#xa;	0 &#x3a; lifeExpRand &#x25; 3&#x3b;&#xa;	lifeExp &#x2b;&#x3d; newLE&#x3b;&#xa;&#x7d;&#xa;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>income</name>
+        <rename>income</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>population</name>
+        <rename>population</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>lifeExp</name>
+        <rename>lifeExp</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>708</xloc>
+      <yloc>329</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>PROJECT</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>name</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>region</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>year</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>income</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>population</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>lifeExp</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>708</xloc>
+      <yloc>212</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Array IT</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var newRow &#x3d; &#x28;stateRow&#x3d;&#x3d;0&#x29;&#x3b;&#xa;var lastRow &#x3d; &#x28;parseInt&#x28;maxYear,10&#x29; &#x3d;&#x3d; parseInt&#x28;year,10&#x29;&#x29;&#x3b;&#xa;&#xa;if&#x28;newRow&#x29;&#x7b;&#xa;  var strIncome &#x3d; &#x22;&#x22;&#x3b;&#xa;  var strPop &#x3d; &#x22;&#x22;&#x3b;&#xa;  var strLifeExp &#x3d; &#x22;&#x22;&#x3b;&#xa;&#x7d;&#xa;&#xa;strIncome&#x2b;&#x3d;&#x22;&#x5b;&#x22;&#x2b;year&#x2b;&#x22;, &#x22;&#x2b;income&#x2b;&#x22;&#x5d;&#x22;&#x2b;&#xa;	&#x28; &#x28;lastRow&#x29; &#x3f; &#x22;&#x22; &#x3a; &#x22;,&#x22; &#x29;&#x3b;&#xa;&#xa;&#xa;strPop&#x2b;&#x3d;&#x22;&#x5b;&#x22;&#x2b;year&#x2b;&#x22;, &#x22;&#x2b;population&#x2b;&#x22;&#x5d;&#x22;&#x2b;&#xa;	&#x28; &#x28;lastRow&#x29; &#x3f; &#x22;&#x22; &#x3a; &#x22;,&#x22; &#x29;&#x3b;&#xa;&#xa;strLifeExp&#x2b;&#x3d;&#x22;&#x5b;&#x22;&#x2b;year&#x2b;&#x22;, &#x22;&#x2b;lifeExp&#x2b;&#x22;&#x5d;&#x22;&#x2b;&#xa;	&#x28; &#x28;lastRow&#x29; &#x3f; &#x22;&#x22; &#x3a; &#x22;,&#x22; &#x29;&#x3b;&#xa;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>lastRow</name>
+        <rename>lastRow</rename>
+        <type>Boolean</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>newRow</name>
+        <rename>newRow</rename>
+        <type>Boolean</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>strIncome</name>
+        <rename>strIncome</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>strPop</name>
+        <rename>strPop</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>strLifeExp</name>
+        <rename>strLifeExp</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>883</xloc>
+      <yloc>14</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Add value fields changing sequence</name>
+    <type>FieldsChangeSequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <start>0</start>
+      <increment>1</increment>
+      <resultfieldName>stateRow</resultfieldName>
+    <fields>
+      <field>
+        <name>name</name>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>708</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>maxYear</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>N</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>N</give_back_row>
+      <group>
+      </group>
+      <fields>
+        <field>
+          <aggregate>maxYear</aggregate>
+          <subject>year</subject>
+          <type>MAX</type>
+          <valuefield/>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>500</xloc>
+      <yloc>14</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get maxYear</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <cache_size>500</cache_size>
+      <main>Now the actual values for each Year</main>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue/>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>708</xloc>
+      <yloc>14</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>only last row from each state</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>JSON IT</send_true_to>
+<send_false_to>Thank you guys, Nature.selection&#x28;&#x29;</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>lastRow</leftvalue>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>Boolean</type><text>Y</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>883</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Thank you guys, Nature.selection&#x28;&#x29;</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1080</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JSON IT</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var arrIncome &#x3d; JSON.parse&#x28;&#x22;&#x5b;&#x22;&#x2b; strIncome&#x2b;&#x22;&#x5d;&#x22;&#x29;&#x3b;&#xa;var arrPop &#x3d; JSON.parse&#x28;&#x22;&#x5b;&#x22;&#x2b;strPop&#x2b;&#x22;&#x5d;&#x22;&#x29;&#x3b;&#xa;var arrLifeExp &#x3d; JSON.parse&#x28;&#x22;&#x5b;&#x22;&#x2b;strLifeExp&#x2b;&#x22;&#x5d;&#x22;&#x29;&#x3b;&#xa;&#xa;var jsonRow &#x3d; &#x7b;&#xa;	&#x22;name&#x22;&#x3a;name,&#xa;	&#x22;region&#x22;&#x3a;region,&#xa;	&#x22;income&#x22; &#x3a; arrIncome,&#xa;	&#x22;population&#x22; &#x3a; arrPop,&#xa;	&#x22;lifeExpectancy&#x22; &#x3a; arrLifeExp&#xa;&#x7d;&#x3b;&#xa;&#xa;var strJsonRow &#x3d; JSON.stringify&#x28;jsonRow&#x29;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>strJsonRow</name>
+        <rename>strJsonRow</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>883</xloc>
+      <yloc>212</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>weld</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>N</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>N</give_back_row>
+      <group>
+      </group>
+      <fields>
+        <field>
+          <aggregate>strJsonRow</aggregate>
+          <subject>strJsonRow</subject>
+          <type>CONCAT_COMMA</type>
+          <valuefield/>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>883</xloc>
+      <yloc>329</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>OUTPUT</name>
+    <type>Janino</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <formula><field_name>jsonOutput</field_name>
+<formula_string>&#x22;&#x5b;&#x22; &#x2b; strJsonRow &#x2b; &#x22;&#x5d;&#x22;</formula_string>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<replace_field>strJsonRow</replace_field>
+</formula>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>997</xloc>
+      <yloc>329</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+<attributes><group><name>DataService</name>
+<attribute><key>name</key>
+<value/>
+</attribute><attribute><key>stepname</key>
+<value/>
+</attribute></group></attributes>
+
+</transformation>
