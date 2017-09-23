@@ -30,7 +30,7 @@
       <Property>listeners</Property>
       <Property>refreshPeriod</Property>
     </Model>
-    <Implementation>
+    <Implementation supportsLegacy="true" supportsAMD="true">
       <Code src="d3CalendarView.js"/>
       <Styles>
         <Style version="1.0" src="d3CalendarView.css">d3CalendarView</Style>

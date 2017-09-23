@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdf><title>Box Plots</title><description>Clean Dashboard</description><author>Kleyson Rios</author><style>Clean</style><rendererType>bootstrap</rendererType><widget>false</widget><widgetName></widgetName><widgetParameters></widgetParameters></cdf>
+<cdf><title>Box Plots</title><description>Clean Dashboard</description><author>Kleyson Rios</author><style>CleanRequire</style><rendererType>bootstrap</rendererType><require>true</require><widget>false</widget><widgetName></widgetName><widgetParameters></widgetParameters></cdf>

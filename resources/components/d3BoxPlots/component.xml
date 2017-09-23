@@ -31,7 +31,7 @@
 		<Property>listeners</Property>
 		<Property>refreshPeriod</Property>
     </Model>
-    <Implementation>
+    <Implementation supportsLegacy="true" supportsAMD="true">
       <Code src="d3BoxPlots.js"/>
       <Styles>
         <Style version="1.0" src="d3BoxPlots.css">d3BoxPlots</Style>
