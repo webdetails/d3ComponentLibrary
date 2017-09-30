@@ -20,9 +20,10 @@
     prefix = requirePaths['d3ComponentLibrary/components'] = '../resources/amd-components';
   }
 
+  requirePaths['d3ComponentLibrary/lib/d3'] = prefix + '/../components/commons/lib/d3';  
   requirePaths['d3ComponentLibrary/components/D3BoxPlotsComponent'] = prefix + '/d3BoxPlots/d3BoxPlots';
   requirePaths['d3ComponentLibrary/components/D3CalendarViewComponent'] = prefix + '/d3CalendarView/d3CalendarView';
   requirePaths['d3ComponentLibrary/components/D3Component'] = prefix + '/d3Component/d3Component';
   requirePaths['d3ComponentLibrary/components/D3MotionScatterPlotComponent'] = prefix + '/d3MotionScatterPlot/d3MotionScatterPlot';
-  requirePaths['d3ComponentLibrary/components/D3ScatterplotMatrixComponent'] = prefix + '/d3ScatterplotMatrix/d3ScatterplotMatrix';  
+  requirePaths['d3ComponentLibrary/components/D3ScatterplotMatrixComponent'] = prefix + '/d3ScatterplotMatrix/d3ScatterplotMatrix'; 
 })();

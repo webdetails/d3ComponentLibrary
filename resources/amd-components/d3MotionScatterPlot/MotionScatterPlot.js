@@ -1,5 +1,5 @@
 define([
-  '../commons/lib/d3'
+  'd3ComponentLibrary/lib/d3'
 ], function(
   d3 
 ) {

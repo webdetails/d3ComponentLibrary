@@ -5,8 +5,7 @@
 define([
   './commons/d3ComponentBase'
 ], function(
-  D3ComponentBase,
-  d3
+  D3ComponentBase
 ) {
   return D3ComponentBase.extend({
 

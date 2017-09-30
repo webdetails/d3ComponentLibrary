@@ -5,7 +5,7 @@
 define([
   'cdf/components/ChartComponent',
 	'amd!cdf/lib/underscore',
-  './lib/d3'	
+  'd3ComponentLibrary/lib/d3'	
 ], function(
   ChartComponent,
 	_,

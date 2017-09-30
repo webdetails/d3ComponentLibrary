@@ -3,7 +3,7 @@
  */
 define([
   './commons/d3ComponentBase',
-  './commons/lib/d3',
+  'd3ComponentLibrary/lib/d3',
   'amd!cdf/lib/underscore',
   'css!./d3ScatterPlotMatrix/d3ScatterPlotMatrix'
 ], function(
