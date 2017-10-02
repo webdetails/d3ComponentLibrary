@@ -30,7 +30,7 @@
       <Property>listeners</Property>
       <Property>refreshPeriod</Property>
     </Model>
-    <Implementation>
+    <Implementation supportsLegacy="true" supportsAMD="true">
       <Code src="d3ScatterplotMatrix.js"/>
       <Styles>
         <Style version="1.0" src="d3ScatterplotMatrix.css">d3ScatterplotMatrix</Style>

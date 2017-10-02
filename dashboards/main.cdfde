@@ -15,7 +15,7 @@
      },
      {
       "name": "resourceFile",
-      "value": "../../../api/repos/d3ComponentLibrary/static/custom/js/d3ComponentLibrary.js",
+      "value": "../../../../content/d3ComponentLibrary/static/custom/js/d3ComponentLibrary.require.js",
       "type": "ResourceFile"
      },
      {
@@ -38,7 +38,7 @@
      },
      {
       "name": "resourceFile",
-      "value": "../../../api/repos/d3ComponentLibrary/static/custom/css/d3ComponentLibrary.css",
+      "value": "../../../../content/d3ComponentLibrary/static/custom/css/d3ComponentLibrary.css",
       "type": "ResourceFile"
      },
      {

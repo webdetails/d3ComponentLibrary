@@ -28,4 +28,7 @@
 	<menu-items>
 		<!--<menu-item id="d3ComponentLibrary_main" anchor="tools-submenu" label="D3ComponentLibrary" command="content/d3ComponentLibrary/" type="MENU_ITEM" how="LAST_CHILD"/>-->
 	</menu-items>
+  <external-resources>
+    <file context="requirejs">content/d3ComponentLibrary/resources/d3-component-library-require-js-cfg.js</file>
+  </external-resources>  
 </plugin>

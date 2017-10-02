@@ -31,7 +31,7 @@
       <Property>listeners</Property>
       <Property>refreshPeriod</Property>
     </Model>
-    <Implementation>
+    <Implementation supportsLegacy="true" supportsAMD="true">
       <Code src="d3Component.js"/>
       <!--Styles>
         <Style version="1.0" src="d3Component.css">d3Component</Style>
